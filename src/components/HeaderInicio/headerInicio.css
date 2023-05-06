@@ -1,0 +1,26 @@
+.header {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 25px;
+}
+
+.notificacionInicio{
+    height: 100%;
+    padding-right: 15px;
+}
+.relojInicio{
+    height: 100%;
+}
+.seccionNotificaciones{
+    width: 120px;
+    padding: 5px;
+}
+.tituloInicio{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bolder;
+    font-size:28px;
+
+}
