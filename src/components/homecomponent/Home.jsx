@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "../navbarcomponent/NavBar";
-import BotonDeRegistro from "../Boton/BotonRegistro";
 import "../Boton/botonRegistro.css";
 
 function Home() {
@@ -8,7 +7,6 @@ function Home() {
     <div>
       Home
       <NavBar />
-      <BotonDeRegistro />
     </div>
   );
 }

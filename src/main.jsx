@@ -5,13 +5,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Home from './Pages/home/Home.jsx'
 import Buscador from './Pages/buscador/Buscador.jsx'
 import Perfil from './Pages/perfil/Perfil.jsx'
+import Configuracion from './Pages/configuracion/Configuracion.jsx'
 
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
-  { path: "/home", element: <Home />},
-  { path: "/buscador", element: <Buscador/> },
-  { path: "/perfil", element: <Perfil /> }
+  { path: "/home", element: <Home /> },
+  { path: "/buscador", element: <Buscador /> },
+  { path: "/perfil", element: <Perfil /> },
+  { path: "/configuracion", element: <Configuracion /> }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
