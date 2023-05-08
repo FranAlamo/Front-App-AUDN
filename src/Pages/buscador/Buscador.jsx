@@ -1,10 +1,10 @@
 import React from 'react'
-import NavBar from '../navbarcomponent/NavBar'
+import NavBar from '../../components/navbarcomponent/NavBar'
 
 function Buscador() {
     return (
         <div>Buscador
-            <NavBar />
+            <NavBar activeImage={"imagen2"} />
         </div>
     )
 }

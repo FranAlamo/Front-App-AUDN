@@ -10,8 +10,8 @@ import perfil from '../../assets/icons/perfilinactivo.svg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function NavBar() {
-    const [activeImage, setActiveImage] = useState(null);
+function NavBar(props) {
+    const [activeImage, setActiveImage] = useState(props.activeImage || null);
     const navigate = useNavigate();
 
     const handleImageClick = (image, path) => {

@@ -9,10 +9,11 @@
 
 .notificacionInicio{
     height: 100%;
-    padding-right: 15px;
+    
 }
 .relojInicio{
     height: 100%;
+    padding-right: 15px;
 }
 .seccionNotificaciones{
     width: 120px;
