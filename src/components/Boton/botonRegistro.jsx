@@ -1,8 +1,8 @@
 import React from "react";
 import "../Boton/BotonRegistro.css";
 
-const BotonRegistro = () => {
-  return <button>Registrarse gratis</button>;
+const BotonRegistro = (props) => {
+  return <button></button>;
 };
 
 export default BotonRegistro;
