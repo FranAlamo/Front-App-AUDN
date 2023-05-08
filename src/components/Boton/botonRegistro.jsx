@@ -1,7 +1,8 @@
 import React from "react";
+import "../Boton/BotonRegistro.css";
 
-const botonDeRegistro = () => {
+const BotonRegistro = () => {
   return <button>Registrarse gratis</button>;
 };
 
-export default botonDeRegistro;
+export default BotonRegistro;
