@@ -1,27 +1,32 @@
 .header {
-    position: absolute;
-    top: 30px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-left: 25px;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  width: 82%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 9%;
+  margin-right: 9%;
 }
 
-.notificacionInicio{
-    height: 100%;
-    
+.notificacionInicio {
+  height: 40%;
 }
-.relojInicio{
-    height: 100%;
-    padding-right: 15px;
+.relojInicio {
+  height: 40%;
+  padding-right: 15px;
 }
-.seccionNotificaciones{
-    width: 120px;
-    padding: 5px;
+.seccionNotificaciones {
+  width: 120px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
 }
-.tituloInicio{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight:bolder;
-    font-size:28px;
-
+.tituloInicio {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
