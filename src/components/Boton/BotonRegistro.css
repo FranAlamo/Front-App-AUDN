@@ -25,6 +25,7 @@ button {
   background-color: #ff8e0a;
   color: white;
 }
+
 .botonAjustable {
   padding: 2px;
   width: fit-content;
@@ -34,7 +35,21 @@ button {
   margin-top: 15px;
   margin-right: 10px;
 }
+
 .bordeNegro {
   border: 2px solid #000000;
   color: #000000;
+}
+
+.botonCupido {
+  width: 65vw;
+  background-color: #000000;
+  color: white;
+  border: none;
+}
+
+.cupido-button {
+  border: none;
+  margin: 10%;
+  color: white;
 }
