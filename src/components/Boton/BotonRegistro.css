@@ -25,7 +25,6 @@ button {
   background-color: #ff8e0a;
   color: white;
 }
-<<<<<<< HEAD
 .botonAjustable {
   padding: 2px;
   width: fit-content;
@@ -34,9 +33,8 @@ button {
   margin-left: 15px;
   margin-top: 15px;
   margin-right: 10px;
-=======
-.bordeNegro{
+}
+.bordeNegro {
   border: 2px solid #000000;
   color: #000000;
->>>>>>> cbeb6b0139028f20690c101328d7a9b1665d264e
 }
