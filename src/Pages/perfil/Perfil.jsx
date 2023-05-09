@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 function Perfil() {
     return (
         <div className='perfil'>
-            <div className='top'>
+            <div className='top-perfil'>
                 <div className='user'>
                     <img src={profileimg} alt="" />
                     <h1></h1>

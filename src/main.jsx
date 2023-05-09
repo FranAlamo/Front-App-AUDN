@@ -7,14 +7,16 @@ import Buscador from './Pages/buscador/Buscador.jsx'
 import Perfil from './Pages/perfil/Perfil.jsx'
 import Configuracion from './Pages/configuracion/Configuracion.jsx'
 import Inicio from './Pages/inicio/Inicio.jsx'
+import Cupido from './Pages/cupido/cupido.jsx'
 
 
 const router = createBrowserRouter([
-  { path: "/", element: <Inicio/>},
+  { path: "/", element: <Inicio /> },
   { path: "/home", element: <Home /> },
   { path: "/buscador", element: <Buscador /> },
   { path: "/perfil", element: <Perfil /> },
-  { path: "/configuracion", element: <Configuracion /> }
+  { path: "/configuracion", element: <Configuracion /> },
+  { path: "/cupido", element: <Cupido /> }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
