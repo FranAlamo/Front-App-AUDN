@@ -1,6 +1,5 @@
 button {
   width: 320px;
-  /* background-color: #ff8e0a; */
   top: 16px;
   left: 16px;
   gap: 12px;
@@ -9,12 +8,12 @@ button {
   border-radius: 4px;
   border-top-right-radius: 16px;
   border-bottom-left-radius: 16px;
-  /* color: white; */
   cursor: pointer;
   font-size: 16px;
   padding: 12px, 16px, 12px, 16px;
   text-align: center;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .negro {
@@ -26,6 +25,7 @@ button {
   background-color: #ff8e0a;
   color: white;
 }
+<<<<<<< HEAD
 .botonAjustable {
   padding: 2px;
   width: fit-content;
@@ -34,4 +34,9 @@ button {
   margin-left: 15px;
   margin-top: 15px;
   margin-right: 10px;
+=======
+.bordeNegro{
+  border: 2px solid #000000;
+  color: #000000;
+>>>>>>> cbeb6b0139028f20690c101328d7a9b1665d264e
 }
