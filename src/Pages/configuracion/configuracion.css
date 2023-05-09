@@ -1,0 +1,62 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#ff880062 1%,
+            #ff880033 6%,
+            rgb(255, 255, 255) 15%);
+}
+
+.configuracion {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+    width: 85vw;
+    padding: 5vh 0;
+    margin: auto;
+    font-size: 16px;
+}
+
+.config-header {
+    position: relative;
+    display: flex;
+}
+
+.title {
+    margin: auto;
+}
+
+.arrow {
+    position: absolute;
+}
+
+.top-config {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttons-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.bottom-config {
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20vh;
+}
+
+.config-bar {
+    height: 2px;
+    background: #E4E6E8;
+    width: 85vw;
+}

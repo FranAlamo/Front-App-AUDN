@@ -16,3 +16,13 @@ button {
   text-align: center;
   text-decoration: none;
 }
+
+.negro {
+  background-color: #000000;
+  color: white;
+}
+
+.naranja {
+  background-color: #ff8e0a;
+  color: white;
+}

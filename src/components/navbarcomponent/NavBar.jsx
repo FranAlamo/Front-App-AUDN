@@ -21,16 +21,22 @@ function NavBar(props) {
 
     return (
         <div className='nav'>
-            <div className='inicio' onClick={() => handleImageClick('imagen1', '/home')}>
+            <div className='item inicio' onClick={() => handleImageClick('imagen1', '/home')}>
                 <img src={activeImage === 'imagen1' ? inicioactivo : inicio} />
+                <p className='navtxt'>Inicio</p>
             </div>
-            <div className='buscador' onClick={() => handleImageClick('imagen2', '/buscador')}>
+            <div className='item buscador' onClick={() => handleImageClick('imagen2', '/buscador')}>
                 <img src={activeImage === 'imagen2' ? lupaactiva : lupa} />
+                <p className='navtxt'>Buscador</p>
             </div>
-            <div className='perfil' onClick={() => handleImageClick('imagen3', '/perfil')}>
+            <div className='item profile' onClick={() => handleImageClick('imagen3', '/perfil')}>
                 <img src={activeImage === 'imagen3' ? perfilactivo : perfil} />
+                <p className='navtxt'>Perfil</p>
             </div>
-            <div className='amigos'><img src={amigos} /></div>
+            <div className='item amigos'>
+                <img src={amigos} />
+                <p className='navtxt'>Amigos</p>
+            </div>
         </div>
     );
 }

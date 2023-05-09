@@ -1,9 +1,10 @@
 import React from "react";
 import NavBar from "../../components/navbarcomponent/NavBar";
 import "../buscador/buscador.css";
-import BotonDeRegistro from "../../components/Boton/BotonRegistro";
+import BotonRegistro from "../../components/Boton/botonRegistro";
 import { useState } from "react";
 import dataTop20 from "../../components/dataTop20";
+
 
 function Buscador() {
   const [dataTop20Todos, setdataTop20Todos] = useState(dataTop20);
@@ -16,7 +17,7 @@ function Buscador() {
     <div className="titulo">
       <section className="buscadorTop">
         <h1>Buscador</h1>
-        <BotonDeRegistro />
+        <BotonRegistro />
 
         <h3 style={{ display: "inline-block" }}>Top 20s</h3>
         <hr

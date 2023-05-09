@@ -27,7 +27,7 @@ function Perfil() {
 
             </div>
             <div className='middle'>
-                <p className='title'>Mis Playlists</p>
+                <p className='title-perfil'>Mis Playlists</p>
                 <div className='bar'></div>
                 <div className='btn'>
                     <p>Crear Playlist</p>
