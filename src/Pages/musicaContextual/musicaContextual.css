@@ -1,0 +1,31 @@
+.tituloMusicaContextual {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.preguntasContextual {
+  color: #26262e;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.generos {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  vertical-align: center;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.ocasion,
+.sientes,
+.clima {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+}

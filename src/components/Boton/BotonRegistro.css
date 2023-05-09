@@ -26,3 +26,12 @@ button {
   background-color: #ff8e0a;
   color: white;
 }
+.botonAjustable {
+  padding: 2px;
+  width: fit-content;
+  border: solid 2px #000000;
+  background-color: transparent;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
