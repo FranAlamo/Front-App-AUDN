@@ -7,10 +7,13 @@ import Buscador from './Pages/buscador/Buscador.jsx'
 import Perfil from './Pages/perfil/Perfil.jsx'
 import Configuracion from './Pages/configuracion/Configuracion.jsx'
 import Inicio from './Pages/inicio/Inicio.jsx'
+import Registro from './Pages/registro/Registro.jsx'
+
 
 
 const router = createBrowserRouter([
   { path: "/", element: <Inicio/>},
+  { path: "/registro", element: <Registro/>},
   { path: "/home", element: <Home /> },
   { path: "/buscador", element: <Buscador /> },
   { path: "/perfil", element: <Perfil /> },
