@@ -2,6 +2,8 @@ import React from 'react'
 import teclado from '../../assets/imagenes/teclado/keyboard.svg'
 import flechaAtras from '../../assets/icons/flecha-atras.svg'
 import "./inicio_sesion.css"
+import InputComponent from "../../components/input/input"
+
 
 function Inicio_sesion () {
   return (
@@ -12,9 +14,9 @@ function Inicio_sesion () {
       </header>
       <form action="submit" className='form-sesion'>
         <label>Nombre de Usuario o E-mail</label>
-        
+        <InputComponent/>
         <label>Contraseña</label>
-      
+        <InputComponent/>
       </form>
       <div className='keyboard'>
         <img src={teclado} alt="" className='image-keyboard'/>
