@@ -5,26 +5,19 @@ import BotonRegistro from '../../components/Boton/botonRegistro.jsx';
 import '../../components/Boton/BotonRegistro.css';
 import flecha from '../../assets/icons/flecha-atras.svg';
 import '../configuracion/configuracion.css';
+import GeneralHeader from '../../components/generalheader/GeneralHeader';
 
 function Configuracion() {
     let bgcolor = '';
     let txt = '';
+    let link = '';
+    let title = '';
 
     return (
         <div className='container'>
             <div className='configuracion'>
                 <div className='top-config'>
-                    <div className='config-header'>
-                        <Link to='/perfil'>
-                            <div className='arrow'>
-                                <img src={flecha} alt="" />
-                            </div>
-                        </Link>
-
-                        <p className='title'>
-                            Configuración
-                        </p>
-                    </div>
+                    <GeneralHeader link='/perfil' title='Configuración' />
                     <div className='buttons-container'>
                         <BotonRegistro bgcolor='naranja' txt='Editar Apariencia' />
                         <BotonRegistro bgcolor='negro' txt='Editar Perfil' />
