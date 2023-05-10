@@ -9,6 +9,7 @@ import Inicio from "./Pages/inicio/Inicio.jsx";
 import MusicaContextual from "./Pages/musicaContextual/musicaContextual.jsx";
 import Registro from "./Pages/registro/Registro.jsx";
 import Inicio_sesion from "./Pages/inicio-sesion/Inicio_sesion.jsx";
+import Cupido from "./Pages/cupido/cupido.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Inicio /> },
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   { path: "/configuracion", element: <Configuracion /> },
   { path: "/musicacontextual", element: <MusicaContextual /> },
   { path: "/sesion", element: <Inicio_sesion /> },
+  { path: "/cupido", element: <Cupido /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

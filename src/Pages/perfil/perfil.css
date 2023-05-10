@@ -14,7 +14,7 @@
     top: 10%;
 }
 
-.middle {
+.middle-perfil {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -26,7 +26,7 @@
     background-color: #E4E6E8;
 }
 
-.btn {
+.botoncito {
     background-color: #FF8E0A;
     padding: 6px;
     border-radius: 4px;
@@ -36,7 +36,7 @@
     cursor: pointer;
 }
 
-.title-perfil {
+.perfil-title {
     font-weight: bolder;
     color: #26262E;
 }
