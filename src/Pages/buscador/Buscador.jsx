@@ -1,14 +1,16 @@
 import React from "react";
 import NavBar from "../../components/navbarcomponent/NavBar";
 import "../buscador/buscador.css";
-import BotonRegistro from "../../components/Boton/botonRegistro";
 import { useState } from "react";
 import dataTop20 from "../../components/dataTop20";
-
+import InputComponent from "../../components/input/input";
+import lupa from '../../assets//icons/lupa.png';
+import { Link } from 'react-router-dom';
 
 function Buscador() {
+  let imgOnClick = '';
   const [dataTop20Todos, setdataTop20Todos] = useState(dataTop20);
-
+  let bgcolor = "";
   const mostrarTodo = () => {
     setdataTop20Todos(dataTop20);
   };
@@ -16,10 +18,13 @@ function Buscador() {
   return (
     <div className="titulo">
       <section className="buscadorTop">
-        <h1>Buscador</h1>
-        <BotonRegistro />
-
-        <h3 style={{ display: "inline-block" }}>Top 20s</h3>
+        <h1 className="buscadorTitulo">Buscador</h1>
+        <Link to='/busquedas'>
+          <InputComponent bgcolor='buscadorGris' img={lupa} imgOnClick='/busquedas' />
+        </Link>
+        <h3 className="top20titulo" style={{ display: "inline-block" }}>
+          Top 20s
+        </h3>
         <hr
           style={{
             display: "inline-block",
@@ -32,7 +37,7 @@ function Buscador() {
         />
       </section>
 
-      <div className="main">
+      <div className="mainBuscador">
         {dataTop20Todos.map((data) => (
           <Card key={data.id} data={data} mostrarTodo={mostrarTodo} />
         ))}
