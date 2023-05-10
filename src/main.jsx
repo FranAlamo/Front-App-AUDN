@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   { path: "/perfil", element: <Perfil /> },
   { path: "/configuracion", element: <Configuracion /> },
   { path: "/musicacontextual", element: <MusicaContextual /> },
-  { path: "/sesion", element: <Inicio_sesion /> }
+  { path: "/sesion", element: <Inicio_sesion /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
