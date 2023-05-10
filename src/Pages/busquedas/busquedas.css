@@ -1,0 +1,43 @@
+.busquedas-container {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-p {
+    font-weight: bolder;
+}
+
+.title-container {
+    justify-content: space-between;
+    margin: 25px 0;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+}
+
+.busqueda-bar {
+    height: 2px;
+    width: 35vw;
+    background-color: #E4E6E8;
+}
+
+.second-p {
+    font-weight: bolder;
+    color: #BFC0C1;
+}
+
+.teclado-container {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.teclado-container img {
+    width: 100vw;
+    height: 100%;
+}
