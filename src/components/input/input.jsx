@@ -1,10 +1,10 @@
 import React from "react";
 import "./Input.css";
 
-function InputComponent() {
+const InputComponent = (props) => {
   return (
     <div>
-      <input className="inputComponent"></input>
+      <input className="inputComponent" type={props.type} value={props.value} onChange={props.onChange}></input>
     </div>
   );
 }

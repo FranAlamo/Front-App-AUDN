@@ -11,8 +11,6 @@ function Inicio() {
   let bgcolor = '';
   let txt = '';
   
-
-
   return (
     <div className='contenedorInicio'>
     <div className='logo'><img src={logo} alt="logo"/>
