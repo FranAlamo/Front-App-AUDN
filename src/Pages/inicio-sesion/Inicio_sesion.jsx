@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import teclado from "../../assets/imagenes/teclado/keyboard.svg";
+import ojoAbierto from "../../assets/icons/state=open.svg";
+import ojoCerrado from "../../assets/icons/state=closed.svg";
 import "./inicio_sesion.css";
 import InputComponent from "../../components/input/input";
 import GeneralHeader from "../../components/generalheader/GeneralHeader";
@@ -48,6 +50,7 @@ function Inicio_sesion() {
         <div className="input-container">
           <p>Nombre de Usuario o E-mail</p>
           <InputComponent
+            bgcolor="inputComponent"
             type="email"
             value={email}
             onChange={handleEmailChange}
@@ -56,6 +59,7 @@ function Inicio_sesion() {
         <div className="input-container">
           <p>Contraseña</p>
           <InputComponent
+            bgcolor="inputComponent"
             type="password"
             value={password}
             onChange={handlePasswordChange}

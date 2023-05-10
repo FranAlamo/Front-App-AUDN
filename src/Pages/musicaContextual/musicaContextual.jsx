@@ -3,6 +3,7 @@ import "../musicaContextual/musicaContextual.css";
 import BotonRegistro from "../../components/Boton/botonRegistro";
 import GeneralHeader from "../../components/generalheader/GeneralHeader";
 import InputComponent from "../../components/input/input";
+
 function contextual() {
   return (
     <div className="contenedorContextual">
