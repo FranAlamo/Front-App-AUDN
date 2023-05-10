@@ -21,7 +21,9 @@ function Inicio() {
     </Link>
     <BotonRegistro bgcolor='bordeNegro' txt={<p><img src={logoGoogle} alt="logoGoogle"/> &nbsp; Continuar con Google</p>}/>
     <BotonRegistro bgcolor='bordeNegro' txt={<p><img src={logoApple} alt="logoApple"/> &nbsp; Continuar con Apple</p>}/>
+    <Link to='/sesion'>
     <button type="" className='botonIniciarSesion'>Iniciar Sesión</button>
+    </Link>
     </section>
     </div>
   )
