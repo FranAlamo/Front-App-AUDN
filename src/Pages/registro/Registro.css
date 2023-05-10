@@ -1,9 +1,45 @@
-.botonBack{
-    width: 50px;
-    border: none;
-    background-color: transparent;
-}
+.registroContenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
 
+}
 .headerRegistro{
-    display: inline
+    grid-column: 1;
+    grid-row: 1;
+
+}
+.labelRegistro{
+    font-size: 22px;
+    font-weight: bold;
+}
+.seccionEmail{
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    margin-top: 70px;
+    height: 200px;
+    
+}
+.parrafoComfirmar{
+    margin-top: 20px;
+}
+.tituloRegistro{
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    font-size: 28px;
+}
+.footerRegistro{
+    width: 100%;
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 90px;
+    margin-left: 35px;
+}
+.keyboard{
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }
