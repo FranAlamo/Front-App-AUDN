@@ -26,10 +26,10 @@ function Perfil() {
                 </Link>
 
             </div>
-            <div className='middle'>
-                <p className='title-perfil'>Mis Playlists</p>
+            <div className='middle-perfil'>
+                <p className='perfil-title'>Mis Playlists</p>
                 <div className='bar'></div>
-                <div className='btn'>
+                <div className='botoncito'>
                     <p>Crear Playlist</p>
                 </div>
             </div>
