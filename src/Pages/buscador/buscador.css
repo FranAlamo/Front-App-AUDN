@@ -4,6 +4,7 @@ h1 {
   height: 36px;
   top: 20px;
 }
+
 .mainBuscador {
   display: flex;
   flex-wrap: wrap;
@@ -17,44 +18,38 @@ h1 {
   gap: 20px;
   padding-top: 220px;
 }
+
 .cancion {
   font-size: 14px;
   color: #26262e;
   text-align: center;
   margin-top: 10px;
 }
+
 .artista {
   font-size: 12px;
   color: #838486;
   text-align: center;
   margin-top: 8px;
 }
+
 .buscadorTop {
+  width: 100vw;
   padding: 35px;
   background-color: white;
   z-index: 2;
   position: fixed;
-  background: linear-gradient(
-    #f2ab5a 0.1%,
-    #ffcc91 1%,
-    #f3ebe2 10%,
-    rgb(255, 255, 255) 20%
-  );
+  background: linear-gradient(#f2ab5a 0.1%,
+      #ffcc91 1%,
+      #f3ebe2 10%,
+      rgb(255, 255, 255) 20%);
 }
+
 .buscadorTitulo {
   padding-top: 10px;
   margin-bottom: 20px;
 }
+
 .top20titulo {
   padding-top: 18px;
-}
-.iconoLupa {
-  position: absolute;
-  top: 48%;
-  left: 50px;
-  width: 25px;
-  height: 25px;
-  background-image: url(../../assets//icons/lupa.png);
-  background-size: contain;
-  background-repeat: no-repeat;
 }

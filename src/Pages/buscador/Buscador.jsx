@@ -4,7 +4,11 @@ import "../buscador/buscador.css";
 import { useState } from "react";
 import dataTop20 from "../../components/dataTop20";
 import InputComponent from "../../components/input/input";
+import lupa from '../../assets//icons/lupa.png';
+import { Link } from 'react-router-dom';
+
 function Buscador() {
+  let imgOnClick = '';
   const [dataTop20Todos, setdataTop20Todos] = useState(dataTop20);
   let bgcolor = "";
   const mostrarTodo = () => {
@@ -15,8 +19,9 @@ function Buscador() {
     <div className="titulo">
       <section className="buscadorTop">
         <h1 className="buscadorTitulo">Buscador</h1>
-        <InputComponent bgcolor="buscadorGris" />
-        <span class="iconoLupa"></span>
+        <Link to='/busquedas'>
+          <InputComponent bgcolor='buscadorGris' img={lupa} imgOnClick='/busquedas' />
+        </Link>
         <h3 className="top20titulo" style={{ display: "inline-block" }}>
           Top 20s
         </h3>

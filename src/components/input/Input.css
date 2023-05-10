@@ -1,4 +1,15 @@
+.inputComponent input {
+  border: transparent;
+  height: 43px;
+}
+
+.inputComponent img {
+  height: 50%;
+}
+
 .inputComponent {
+  align-items: center;
+  display: flex;
   width: 320px;
   top: 16px;
   left: 16px;
