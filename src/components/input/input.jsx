@@ -1,10 +1,10 @@
 import React from "react";
 import "./Input.css";
 
-function InputComponent() {
+function InputComponent(props) {
   return (
     <div>
-      <input className="inputComponent"></input>
+      <input className={props.bgcolor}></input>
     </div>
   );
 }
