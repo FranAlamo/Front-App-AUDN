@@ -21,17 +21,28 @@ import alfredo from "../assets/imagenes/folklore/zitarroza.jpg";
 import maluma from "../assets/imagenes/regueton/maluma.jpg";
 import norah from "../assets/imagenes/jazz/norah_jones1.jpg";
 import lospalmeras from "../assets/imagenes/cumbia/losPalmeras.jpg";
+import rolling from "../assets/imagenes/Rock/rollingStones.png";
 import rem from "../assets/imagenes/Rock/rem.jpg";
 const dataTop20 = [
+  {
+    cancion: "(I Cant get No) Satisfaction",
+    artista: "The Rolling Stones",
+    image: rolling,
+  },
   {
     cancion: "Que tiene la noche",
     artista: "Chacho Ramos",
     image: chachoRamos,
   },
   {
-    cancion: "Universo paralelo",
-    artista: "La Conga",
-    image: laConga,
+    cancion: "Mayores",
+    artista: "Becky G",
+    image: becky,
+  },
+  {
+    cancion: "Respect",
+    artista: "Aretha Franklin",
+    image: aretha,
   },
   {
     cancion: "Isla patrulla",
@@ -48,10 +59,11 @@ const dataTop20 = [
     artista: "Amy Winehouse",
     image: amy,
   },
+
   {
-    cancion: "Respect",
-    artista: "Aretha Franklin",
-    image: aretha,
+    cancion: "Universo paralelo",
+    artista: "La Conga",
+    image: laConga,
   },
   {
     cancion: "What a Wonderful World",
@@ -94,11 +106,6 @@ const dataTop20 = [
     image: lospalmeras,
   },
 
-  {
-    cancion: "Mayores",
-    artista: "Becky G",
-    image: becky,
-  },
   {
     cancion: "Soltera",
     artista: "Daddy Yanquee",

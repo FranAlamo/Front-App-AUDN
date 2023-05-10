@@ -9,14 +9,27 @@ function contextual() {
       <GeneralHeader link="/home" title="Música Contextual" />
 
       <div className="preguntasContextual">
-        <section className="ocasion">¿Cuál es la ocasión?</section>
-        <InputComponent bgcolor="musicaContextualBordes" />
+        <label for="ocasion">¿Cuál es la ocasión?</label>
+        <div class="dropdown">
+          <button class="buscadorGris"></button>
+          <div class="dropdown-content">
+            <a href="#">Ejercicio Físico</a>
+            <a href="#">Limpieza</a>
+            <a href="#">Celebración</a>
+            <a href="#">Dormir</a>
+            <a href="#">Meditar</a>
+            <a href="#">Social</a>
+            <a href="#">Estudiar</a>
+            <a href="#">Relajación</a>
+            <a href="#">Viajando</a>
+          </div>
+        </div>
 
         <section className="sientes">¿Cómo te sientes?</section>
-        <InputComponent />
+        <InputComponent bgcolor="buscadorGris" />
 
         <section className="clima">¿Cómo está el clima?</section>
-        <InputComponent />
+        <InputComponent bgcolor="buscadorGris" />
       </div>
       <div className="seleccionContextual">
         <h1 className="generos">Selecciona hasta 3 géneros</h1>
