@@ -1,6 +1,7 @@
-.inputComponent input {
+input {
   border: transparent;
   height: 43px;
+  outline: none;
 }
 
 .inputComponent img {
@@ -28,6 +29,8 @@
 }
 
 .buscadorGris {
+  align-items: center;
+  display: flex;
   width: 80vw;
   top: 16px;
   left: 16px;
