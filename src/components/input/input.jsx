@@ -1,7 +1,7 @@
 import React from "react";
 import "./Input.css";
 
-function InputComponent() {
+function InputComponent(props) {
   return (
     <div>
       <input className="inputComponent" type={props.type} value={props.value} onChange={props.onChange}></input>

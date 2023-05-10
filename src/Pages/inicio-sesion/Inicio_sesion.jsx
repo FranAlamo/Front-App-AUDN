@@ -10,7 +10,7 @@ import BotonRegistro from "../../components/Boton/botonRegistro";
 function Inicio_sesion() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [buttonActive, setButtonActive] = useState();
+  const [buttonActive, setButtonActive] = useState(false);
   const [buttonColor, setButtonColor] = useState("inactivo");
 
   function handleEmailChange(event) {
