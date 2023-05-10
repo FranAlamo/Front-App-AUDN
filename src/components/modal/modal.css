@@ -1,12 +1,39 @@
 .modal-container {
+    z-index: 2;
     position: absolute;
     width: 100vw;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.432);
+    display: flex;
 }
 
 .modal {
+    border-radius: 10px;
+    background-color: white;
+    height: 80vh;
+    width: 80vw;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.modal-txt {
+    font-size: 16px;
+    color: #26262E;
+}
+
+.lastp {
+    font-weight: bolder;
+}
+
+.modal p {
+    margin: 20px;
 }

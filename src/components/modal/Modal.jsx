@@ -14,16 +14,16 @@ function Modal(props) {
     return (
         <div className='modal-container'>
             <div className='modal'>
-                <p>Cupido Musical</p>
+                <p className='modal-title'>{props.modaltitle}</p>
                 <div className='img-container-modal'>
-                    <img src="" alt="" />
+                    <img src={props.modalimg} alt="" />
                 </div>
                 <p className='modal-txt'>
-                    Luego de al menos 2 me gusta, confirma tu selección y crearemos una playlist rápida con los artistas que fueron un match.
+                    {props.modaltxt}
                 </p>
-                <div onClick={cerrarModal}><BotonRegistro txt='Entendido' bgcolor='negro' /></div>
+                <div onClick={cerrarModal}><BotonRegistro txt='Entendido' bgcolor='botonCupido' /></div>
 
-                <p onClick={cerrarModal}>No volver a mostrar</p>
+                <p className='lastp' onClick={cerrarModal}>No volver a mostrar</p>
 
             </div>
         </div>

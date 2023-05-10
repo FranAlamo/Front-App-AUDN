@@ -25,15 +25,19 @@ button {
   background-color: #ff8e0a;
   color: white;
 }
+
 .botonAjustable {
   padding: 2px;
   width: fit-content;
-  border: solid 2px #000000;
+  border: solid 2px #26262e;
+  color: #26262e;
   background-color: transparent;
-  margin-left: 15px;
+  margin-left: 10px;
   margin-top: 15px;
   margin-right: 10px;
+  letter-spacing: 0.5px;
 }
+
 .bordeNegro {
   border: 2px solid #000000;
   color: #000000;
@@ -44,4 +48,28 @@ button {
   color: white;
   border: none;
   
+}
+.musicaContextualBordes {
+  border: solid 2px #26262e;
+}
+.crearPlaylist {
+  margin-top: 25px;
+  border: solid 1px #e4e6e8;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+.botonCupido {
+  width: 65vw;
+  background-color: #000000;
+  color: white;
+  border: none;
+}
+
+.cupido-button {
+  border: none;
+  margin: 10%;
+  color: white;
 }

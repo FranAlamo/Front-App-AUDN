@@ -11,127 +11,138 @@ import ozuna from "../assets/imagenes/regueton/ozuna.jpg";
 import guns from "../assets/imagenes/Rock/guns.jpg";
 import theDoors from "../assets/imagenes/Rock/theDoors.jpg";
 import theEagles from "../assets/imagenes/Rock/theEagles.jpg";
-
+import lucas from "../assets/imagenes/cumbia/lucasSugo.jpg";
+import becky from "../assets/imagenes/regueton/beckyG.jpg";
+import daddy from "../assets/imagenes/regueton/daddyYanquee.jpg";
+import pabloEstramin from "../assets/imagenes/folklore/pabloEstramin.jpg";
+import larbanois from "../assets/imagenes/folklore/larbanoisCarrero.jpg";
+import matias from "../assets/imagenes/cumbia/matiasValdez.jpg";
+import alfredo from "../assets/imagenes/folklore/zitarroza.jpg";
+import maluma from "../assets/imagenes/regueton/maluma.jpg";
+import norah from "../assets/imagenes/jazz/norah_jones1.jpg";
+import lospalmeras from "../assets/imagenes/cumbia/losPalmeras.jpg";
+import rem from "../assets/imagenes/Rock/rem.jpg";
 const dataTop20 = [
   {
-    id: "1",
-    cancion: "Boleto al Amor",
+    cancion: "Que tiene la noche",
     artista: "Chacho Ramos",
     image: chachoRamos,
   },
   {
-    id: "2",
-    cancion: "Hechicera",
+    cancion: "Universo paralelo",
     artista: "La Conga",
     image: laConga,
   },
   {
-    id: "3",
-    cancion: "A Don José",
+    cancion: "Isla patrulla",
     artista: "Braulio Lopez",
     image: braulioLopez,
   },
   {
-    id: "4",
-    cancion: "hola",
-    artista: "Maciegas",
-    image: maciegas,
+    cancion: "Hechicera",
+    artista: "Lucas Sugo",
+    image: lucas,
   },
   {
-    id: "5",
     cancion: "Back to Black",
     artista: "Amy Winehouse",
     image: amy,
   },
   {
-    id: "6",
     cancion: "Respect",
     artista: "Aretha Franklin",
     image: aretha,
   },
   {
-    id: "7",
     cancion: "What a Wonderful World",
     artista: "Louis Armstrong",
     image: louis,
   },
   {
-    id: "8",
     cancion: "Feeling Good",
     artista: "Nina Simone",
     image: nina,
   },
   {
-    id: "9",
     cancion: "Mi Cama",
     artista: "J Balvin",
     image: jBalvin,
   },
   {
-    id: "10",
     cancion: "100",
     artista: "Ozuna",
     image: ozuna,
   },
   {
-    id: "11",
-    cancion: "Sweet Child O' Mine",
-    artista: "Guns and Roses",
+    cancion: "Sweet Child O Mine",
+    artista: "Guns N Roses",
     image: guns,
   },
   {
-    id: "12",
-    cancion: "(I Can't Get No) Satisfaction",
+    cancion: "Light My Fire",
     artista: "The doors",
     image: theDoors,
   },
   {
-    id: "13",
-    cancion: "hola",
-    artista: "The Eagles",
+    cancion: "Hotel California",
+    artista: "Eagles",
     image: theEagles,
   },
   {
-    id: "14",
-    cancion: "hola",
-    artista: "The Eagles",
-    image: theEagles,
+    cancion: "Bombon asesino",
+    artista: "Los Palmeras",
+    image: lospalmeras,
+  },
+
+  {
+    cancion: "Mayores",
+    artista: "Becky G",
+    image: becky,
   },
   {
-    id: "15",
-    cancion: "hola",
-    artista: "The Eagles",
-    image: theEagles,
+    cancion: "Soltera",
+    artista: "Daddy Yanquee",
+    image: daddy,
   },
   {
-    id: "16",
-    cancion: "hola",
-    artista: "The Eagles",
-    image: theEagles,
+    cancion: "Morir en la capital",
+    artista: "Pablo Estramín",
+    image: pabloEstramin,
   },
   {
-    id: "17",
-    cancion: "hola",
-    artista: "The Eagles",
-    image: theEagles,
+    cancion: "Donde yace mi corazón",
+    artista: "Larbanois & Carrero",
+    image: larbanois,
   },
   {
-    id: "18",
-    cancion: "hola",
-    artista: "The Eagles",
-    image: theEagles,
+    cancion: "Latidos",
+    artista: "Matias Valdez",
+    image: matias,
   },
   {
-    id: "19",
-    cancion: "hola",
-    artista: "The Eagles",
-    image: theEagles,
+    cancion: "Doña soledad",
+    artista: "Alfredo Sitarroza",
+    image: alfredo,
   },
   {
-    id: "20",
-    cancion: "hola",
-    artista: "The Eagles",
-    image: theEagles,
+    cancion: "Felices los 4",
+    artista: "Maluma",
+    image: maluma,
+  },
+  {
+    cancion: "Losing My Religion",
+    artista: "REM",
+    image: rem,
+  },
+  {
+    cancion: "Bendito",
+    artista: "Maciegas",
+    image: maciegas,
+  },
+  {
+    cancion: "Dont know Why",
+    artista: "Norah Jones",
+    image: norah,
   },
 ];
 export default dataTop20;
