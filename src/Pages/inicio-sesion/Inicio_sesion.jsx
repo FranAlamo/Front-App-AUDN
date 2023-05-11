@@ -41,6 +41,8 @@ function Inicio_sesion() {
 
   let title = "";
   let link = "";
+  let bgcolor= "";
+
   return (
     <div>
       <header>
@@ -49,8 +51,12 @@ function Inicio_sesion() {
       <form onSubmit={handleSubmit} className="form-body">
         <div className="input-container">
           <p>Nombre de Usuario o E-mail</p>
+<<<<<<< HEAD
           <InputComponent
             bgcolor="inputComponent"
+=======
+          <InputComponent bgcolor="inputComponent"
+>>>>>>> e02c2b8de5f1a33e2a340b0b5fc74d0ca8d93331
             type="email"
             value={email}
             onChange={handleEmailChange}
@@ -59,7 +65,11 @@ function Inicio_sesion() {
         <div className="input-container">
           <p>Contraseña</p>
           <InputComponent
+<<<<<<< HEAD
             bgcolor="inputComponent"
+=======
+          bgcolor="inputComponent"
+>>>>>>> e02c2b8de5f1a33e2a340b0b5fc74d0ca8d93331
             type="password"
             value={password}
             onChange={handlePasswordChange}
