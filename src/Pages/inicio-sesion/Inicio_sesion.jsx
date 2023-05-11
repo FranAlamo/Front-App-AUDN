@@ -2,6 +2,8 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import teclado from "../../assets/imagenes/teclado/keyboard.svg";
+import ojoAbierto from "../../assets/icons/state=open.svg";
+import ojoCerrado from "../../assets/icons/state=closed.svg";
 import "./inicio_sesion.css";
 import InputComponent from "../../components/input/input";
 import GeneralHeader from "../../components/generalheader/GeneralHeader";
@@ -26,7 +28,7 @@ function Inicio_sesion() {
   }
 
   function checkButtonActive() {
-    if (email && password) {
+    if (email.includes("@") && email.length >= 8  && password) {
       setButtonActive(true);
       setButtonColor("naranja");
     } else {
@@ -92,12 +94,14 @@ try {
         <div className="input-container">
           <p>Contraseña</p>
           <InputComponent
-          bgcolor="inputComponent"
+            bgcolor="inputComponent"
             type="password"
             value={password}
             onChange={handlePasswordChange}
+            img={ojoCerrado}
           />
         </div>
+        <Link to="/home">
         <div className="button-sesion">
           <BotonRegistro
             txt="Continuar"
@@ -106,6 +110,7 @@ try {
           ></BotonRegistro>
           <p className="input-contraseña">¿Olvidaste tu contraseña?</p>
         </div>
+        </Link>
       </form>
       <div className="keyboard">
         <img src={teclado} alt="" className="image-keyboard" />

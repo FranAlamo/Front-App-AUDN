@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import BotonRegistro from '../../components/Boton/BotonRegistro';
-import InputComponent from '../../components/Input/input';
+import BotonRegistro from '../../components/Boton/botonRegistro';
+import InputComponent from '../../components/input/input'
 import './Registro.css';
 import GeneralHeader from '../../components/generalheader/GeneralHeader';
 import teclado from '../../assets/imagenes/teclado/keyboard.svg';
@@ -18,7 +18,7 @@ function Registro() {
 
   let title = "";
   let link = "";
-  let bgcolor ="";
+let bgcolor = "";
 
   function checkButtonActive() {
     if (email.includes("@") && email.length >= 8) {
@@ -42,7 +42,8 @@ function Registro() {
       <form onSubmit={handleSubmit} className='seccionEmail'>
       <label className='labelRegistro'>Correo electrónico:</label>
       <br/>
-      <InputComponent type="email" bgcolor='inputComponent'
+      <InputComponent type="email"
+      bgcolor="inputComponent"
       value={email}
       onChange={handleEmailChange}/>
       <p className='parrafoComfirmar'>Deberás poder confirmarlo luego.</p>

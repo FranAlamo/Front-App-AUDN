@@ -12,6 +12,8 @@ import Inicio_sesion from "./Pages/inicio-sesion/Inicio_sesion.jsx";
 import Cupido from "./Pages/cupido/cupido.jsx";
 import ErrorPage from "./Pages/404/ErrorPage.jsx";
 import Busquedas from "./Pages/busquedas/busquedas.jsx";
+import Crear_cuenta from "./Pages/crearCuenta/Crear_cuenta.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,9 @@ const router = createBrowserRouter([
   },
   {
     path: "/busquedas", element: <Busquedas />, errorElement: <ErrorPage />,
+  },
+  {
+    path: "/cuenta", element: <Crear_cuenta />, errorElement: <ErrorPage />,
   },
 ]);
 

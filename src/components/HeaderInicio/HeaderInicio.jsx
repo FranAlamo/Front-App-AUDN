@@ -6,6 +6,8 @@ import notificaciones from '../../assets/icons/style=outline, state=active, noti
 
 function HeaderInicio() {
   return (
+    <>
+    <div className='general-header'></div>
     <div className='header'>
     <section className='tituloHeaderInicio'>Musica ya</section>
     <section className='seccionNotificaciones'>
@@ -13,6 +15,7 @@ function HeaderInicio() {
     <img className='notificacionInicio' src={notificaciones} />
     </section>
     </div>
+    </>
   )
 }
 
