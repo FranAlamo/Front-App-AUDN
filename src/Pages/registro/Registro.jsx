@@ -1,11 +1,6 @@
 import React, {useState} from 'react';
-<<<<<<< HEAD
 import BotonRegistro from '../../components/Boton/botonRegistro';
 import InputComponent from '../../components/input/input'
-=======
-import BotonRegistro from '../../components/Boton/BotonRegistro';
-import InputComponent from '../../components/Input/input';
->>>>>>> e02c2b8de5f1a33e2a340b0b5fc74d0ca8d93331
 import './Registro.css';
 import GeneralHeader from '../../components/generalheader/GeneralHeader';
 import teclado from '../../assets/imagenes/teclado/keyboard.svg';
@@ -23,11 +18,7 @@ function Registro() {
 
   let title = "";
   let link = "";
-<<<<<<< HEAD
 let bgcolor = "";
-=======
-  let bgcolor ="";
->>>>>>> e02c2b8de5f1a33e2a340b0b5fc74d0ca8d93331
 
   function checkButtonActive() {
     if (email.includes("@") && email.length >= 8) {
@@ -51,12 +42,8 @@ let bgcolor = "";
       <form onSubmit={handleSubmit} className='seccionEmail'>
       <label className='labelRegistro'>Correo electrónico:</label>
       <br/>
-<<<<<<< HEAD
       <InputComponent type="email"
       bgcolor="inputComponent"
-=======
-      <InputComponent type="email" bgcolor='inputComponent'
->>>>>>> e02c2b8de5f1a33e2a340b0b5fc74d0ca8d93331
       value={email}
       onChange={handleEmailChange}/>
       <p className='parrafoComfirmar'>Deberás poder confirmarlo luego.</p>
