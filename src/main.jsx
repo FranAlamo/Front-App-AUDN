@@ -47,7 +47,7 @@ const router = createBrowserRouter([
     path: "/busquedas", element: <Busquedas />, errorElement: <ErrorPage />,
   },
   {
-    path: "/cuenta", element: <Crear_cuenta />, errorElement: <ErrorPage />,
+    path: "/registro/crearCuenta", element: <Crear_cuenta />, errorElement: <ErrorPage />,
   },
 ]);
 

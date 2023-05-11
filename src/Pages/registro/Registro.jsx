@@ -4,6 +4,7 @@ import InputComponent from '../../components/input/input'
 import './Registro.css';
 import GeneralHeader from '../../components/generalheader/GeneralHeader';
 import teclado from '../../assets/imagenes/teclado/keyboard.svg';
+import {Link} from 'react-router-dom';
 
 
 function Registro() {
@@ -50,9 +51,11 @@ let bgcolor = "";
       </form>
       </section>
       <section className='footerRegistro'>
+      <Link to='/registro/crearCuenta'>
       <BotonRegistro  txt="Continuar"
       bgcolor={buttonColor}
       disabled={!buttonActive}/>
+      </Link>
       <img src={teclado} alt="keyboard" className='keyboard'/>
       </section>
       </div>
