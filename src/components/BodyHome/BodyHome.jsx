@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 function BodyHome() {
   return (
     <div className="body-home">
-      <Link to="/cupido">
+      <Link to="/home/cupido">
         <div className="button-container">
           <button className="button-image">
             <img src={cherub} alt="" className="image-cherub" />{" "}
@@ -25,7 +25,7 @@ function BodyHome() {
       </Link>
 
       <div className="button-container">
-        <Link to="/musicaContextual">
+        <Link to="/home/musicaContextual">
           <button className="button-image">
             {" "}
             <img src={addons} alt="" className="image-addons" />{" "}

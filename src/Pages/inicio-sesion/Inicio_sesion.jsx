@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import teclado from "../../assets/imagenes/teclado/keyboard.svg";
 import "./inicio_sesion.css";
@@ -12,6 +12,8 @@ function Inicio_sesion() {
   const [password, setPassword] = useState("");
   const [buttonActive, setButtonActive] = useState(false);
   const [buttonColor, setButtonColor] = useState("inactivo");
+ const navigate = useNavigate();
+
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
@@ -33,10 +35,42 @@ function Inicio_sesion() {
     }
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = async(event) => {
     event.preventDefault();
-  }
 
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  email: email,
+  password: password
+});
+
+const requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+try {
+  const response = await fetch 
+  ("http://localhost:8000/api/login", requestOptions);
+  if (response.ok){
+    const respuesta = await response.json();
+    localStorage.setItem("token", respuesta.token);
+    localStorage.setItem("id", respuesta.usuario.id);
+    localStorage.setItem("email", respuesta.usuario.email);
+    localStorage.setItem("name", respuesta.usuario.name);
+    navigate("/home")
+  }else{
+    const respuesta = await response.json();
+    alert(respuesta.error);
+  }
+  }catch(error){
+    alert(error.message)
+  }
+  }
   let title = "";
   let link = "";
   let bgcolor= "";
@@ -50,7 +84,7 @@ function Inicio_sesion() {
         <div className="input-container">
           <p>Nombre de Usuario o E-mail</p>
           <InputComponent bgcolor="inputComponent"
-            type="email"
+            type="text"
             value={email}
             onChange={handleEmailChange}
           />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import NavBar from '../../components/navbarcomponent/NavBar';
 import profileimg from '../../assets/imagenes/perfil/profileimg.png';
 import config from '../../assets/imagenes/perfil/Vector.png';
@@ -11,13 +11,15 @@ import img4 from '../../assets/imagenes/perfil/cover-4.png';
 import { Link } from 'react-router-dom';
 
 function Perfil() {
+ const user = useMemo(() => ({name:localStorage.getItem("name")}), [])
+ const userEmail = useMemo(() => ({email:localStorage.getItem("email")}), [])
     return (
         <div className='perfil'>
             <div className='top-perfil'>
                 <div className='user'>
                     <img src={profileimg} alt="" />
-                    <h1></h1>
-                    <p></p>
+                    <h1>{user.name}</h1>
+                    <p>{userEmail.email}</p>
                 </div>
                 <Link to='/configuracion'>
                     <div className='settings'>

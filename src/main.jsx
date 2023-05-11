@@ -33,13 +33,13 @@ const router = createBrowserRouter([
     path: "/configuracion", element: <Configuracion />, errorElement: <ErrorPage />,
   },
   {
-    path: "/musicacontextual", element: <MusicaContextual />, errorElement: <ErrorPage />,
+    path: "/home/musicacontextual", element: <MusicaContextual />, errorElement: <ErrorPage />,
   },
   {
     path: "/sesion", element: <Inicio_sesion />, errorElement: <ErrorPage />,
   },
   {
-    path: "/cupido", element: <Cupido />, errorElement: <ErrorPage />,
+    path: "/home/cupido", element: <Cupido />, errorElement: <ErrorPage />,
   },
   {
     path: "/busquedas", element: <Busquedas />, errorElement: <ErrorPage />,
