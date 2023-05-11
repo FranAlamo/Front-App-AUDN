@@ -9,19 +9,19 @@ function InputComponent(props) {
     navigate(path);
   };
   return (
-    <div className="inputComponent">
+    <div className={props.bgcolor}>
       {props.img ? (
         <img
           src={props.img}
           onClick={() => handleImageClick(props.imgOnClick)}
         />
       ) : null}
-      <input
-        className={props.bgcolor}
-        type={props.type}
-        value={props.value}
-        onChange={props.onChange}
-      ></input>
+   <input
+   
+      type={props.type}
+      value={props.value}
+      onChange={props.onChange}
+    ></input>
     </div>
   );
 }
