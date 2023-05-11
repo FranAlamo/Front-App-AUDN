@@ -9,11 +9,11 @@ function InputComponent(props) {
     navigate(path);
   };
   return (
-<<<<<<< HEAD
-    <div className="inputComponent">
+    <div className={props.bgcolor}>
       {props.img ? <img src={props.img} onClick={() => handleImageClick(props.imgOnClick)} /> : null}
-      <input className={props.bgcolor} type={props.type} value={props.value} onChange={props.onChange}></input>
-=======
-
+      <input classname='input' type={props.type} value={props.value} onChange={props.onChange}></input>
+    </div>
+  );
+}
 
 export default InputComponent;

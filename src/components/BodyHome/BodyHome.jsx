@@ -6,6 +6,7 @@ import addons from "../../assets/imagenes/Musica-contextual/add-ons.png";
 import map from "../../assets/imagenes/Musica-contextual/map.png";
 import { Link } from "react-router-dom";
 
+
 function BodyHome() {
   return (
     <div className="body-home">

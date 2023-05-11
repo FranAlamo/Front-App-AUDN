@@ -1,4 +1,61 @@
-.inputComponent input {
+input {
+  border: transparent;
+  height: 43px;
+  outline: none;
+}
+
+.inputComponent img {
+  height: 50%;
+}
+
+.inputComponent {
+  align-items: center;
+  display: flex;
+  width: 320px;
+  top: 16px;
+  left: 16px;
+  gap: 12px;
+  height: 48px;
+  border: 2px solid #ff8e0a;
+  border-radius: 4px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px, 16px, 12px, 16px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.buscadorGris {
+  align-items: center;
+  display: flex;
+  width: 80vw;
+  top: 16px;
+  left: 16px;
+  gap: 12px;
+  height: 48px;
+  border: 2px solid #bfc0c1;
+  border-radius: 4px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px, 16px, 12px, 16px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 10px;
+  color: #bfc0c1;
+  outline: none;
+}
+
+
+
+
+
+
+/*.inputComponent input {
   border: transparent;
   height: 43px;
 }

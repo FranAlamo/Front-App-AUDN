@@ -63,6 +63,7 @@ function Inicio_sesion() {
             type="password"
             value={password}
             onChange={handlePasswordChange}
+            img={ojoCerrado}
           />
         </div>
         <div className="button-sesion">
