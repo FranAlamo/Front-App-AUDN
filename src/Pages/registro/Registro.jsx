@@ -4,13 +4,14 @@ import InputComponent from '../../components/input/input'
 import './Registro.css';
 import GeneralHeader from '../../components/generalheader/GeneralHeader';
 import teclado from '../../assets/imagenes/teclado/keyboard.svg';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 
 function Registro() {
   const [email, setEmail] = useState("");
   const [buttonActive, setButtonActive] = useState(false);
   const [buttonColor, setButtonColor] = useState("inactivo");
+  const navigate = useNavigate();
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
@@ -31,8 +32,36 @@ let bgcolor = "";
     }
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = async(event) => {
     event.preventDefault();
+
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    
+    const raw = JSON.stringify({
+      email: email,
+    });
+    
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    try {
+      const response = await fetch 
+      ("http://localhost:8000/api/register", requestOptions)
+      if (response.ok){
+        const respuesta = await response.json();
+        localStorage.setItem("email", respuesta.usuario.email);
+        navigate("/registro/crearCuenta")
+      }else{
+        const respuesta = await response.json();
+        alert(respuesta.error);
+      }
+      }catch(error){
+        alert(error.message)
+      } 
   }
   
   return (
@@ -51,11 +80,10 @@ let bgcolor = "";
       </form>
       </section>
       <section className='footerRegistro'>
-      <Link to='/registro/crearCuenta'>
-      <BotonRegistro  txt="Continuar"
+      <BotonRegistro  txt="Continuar" onClick={handleSubmit}
       bgcolor={buttonColor}
       disabled={!buttonActive}/>
-      </Link>
+    
       <img src={teclado} alt="keyboard" className='keyboard'/>
       </section>
       </div>

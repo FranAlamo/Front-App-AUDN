@@ -17,6 +17,7 @@ function Cupido() {
     let modaltxt = '';
     let modalimg = null;
 
+
     const [modalVisible, setModalVisible] = useState(true);
 
     const ocultarModal = () => {

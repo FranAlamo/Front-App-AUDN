@@ -8,23 +8,24 @@ import { Link } from 'react-router-dom';
 
 
 function Inicio() {
+
   let bgcolor = '';
   let txt = '';
-  
+
   return (
     <div className='contenedorInicio'>
-    <div className='logo'><img src={logo} alt="logo"/>
-    <h1 className='tituloInicio'>Música a medida.</h1></div>
-    <section className='botonesRegistro'>
-    <Link to='/registro'>
-    <BotonRegistro bgcolor='naranja' txt='Registrarse Gratis'/>
-    </Link>
-    <BotonRegistro bgcolor='bordeNegro' txt={<p><img src={logoGoogle} alt="logoGoogle"/> &nbsp; Continuar con Google</p>}/>
-    <BotonRegistro bgcolor='bordeNegro' txt={<p><img src={logoApple} alt="logoApple"/> &nbsp; Continuar con Apple</p>}/>
-    <Link to='/sesion'>
-    <button type="" className='botonIniciarSesion'>Iniciar Sesión</button>
-    </Link>
-    </section>
+      <div className='logo'><img src={logo} alt="logo" />
+        <h1 className='tituloInicio'>Música a medida.</h1></div>
+      <section className='botonesRegistro'>
+        <Link to='/registro'>
+          <BotonRegistro bgcolor='naranja' txt='Registrarse Gratis' />
+        </Link>
+        <BotonRegistro bgcolor='bordeNegro' txt={<p><img src={logoGoogle} alt="logoGoogle" /> &nbsp; Continuar con Google</p>} />
+        <BotonRegistro bgcolor='bordeNegro' txt={<p><img src={logoApple} alt="logoApple" /> &nbsp; Continuar con Apple</p>} />
+        <Link to='/sesion'>
+          <button type="" className='botonIniciarSesion'>Iniciar Sesión</button>
+        </Link>
+      </section>
     </div>
   )
 }
