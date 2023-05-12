@@ -74,7 +74,6 @@ try {
   }
   }
   let title = "";
-  let link = "";
   let bgcolor= "";
 
   return (
@@ -101,7 +100,7 @@ try {
             img={ojoCerrado}
           />
         </div>
-        <Link to="/home">
+      
         <div className="button-sesion">
           <BotonRegistro
             txt="Continuar"
@@ -110,7 +109,7 @@ try {
           ></BotonRegistro>
           <p className="input-contraseña">¿Olvidaste tu contraseña?</p>
         </div>
-        </Link>
+  
       </form>
       <div className="keyboard">
         <img src={teclado} alt="" className="image-keyboard" />
