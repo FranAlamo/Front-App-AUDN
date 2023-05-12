@@ -6,11 +6,10 @@ import addons from "../../assets/imagenes/Musica-contextual/add-ons.png";
 import map from "../../assets/imagenes/Musica-contextual/map.png";
 import { Link } from "react-router-dom";
 
-
 function BodyHome() {
   return (
     <div className="body-home">
-      <Link to="/home/cupido">
+      <Link to="/home/cupido" className="underline-off">
         <div className="button-container">
           <button className="button-image">
             <img src={cherub} alt="" className="image-cherub" />{" "}
@@ -25,8 +24,8 @@ function BodyHome() {
         </div>
       </Link>
 
-      <div className="button-container">
-        <Link to="/home/musicaContextual">
+      <Link to="/home/musicaContextual" className="underline-off">
+        <div className="button-container">
           <button className="button-image">
             {" "}
             <img src={addons} alt="" className="image-addons" />{" "}
@@ -36,8 +35,8 @@ function BodyHome() {
             <h3>Musica contextual</h3>
             <p>Creamos la playlist perfecta para cualquier situación.</p>
           </button>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </div>
   );
 }

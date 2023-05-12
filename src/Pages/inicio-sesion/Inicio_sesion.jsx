@@ -28,7 +28,7 @@ function Inicio_sesion() {
   }
 
   function checkButtonActive() {
-    if (email.includes("@") && email.length >= 8  && password) {
+    if (email.includes("@") && password) {
       setButtonActive(true);
       setButtonColor("naranja");
     } else {
