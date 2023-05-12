@@ -14,7 +14,7 @@ function Inicio_sesion() {
   const [password, setPassword] = useState("");
   const [buttonActive, setButtonActive] = useState(false);
   const [buttonColor, setButtonColor] = useState("inactivo");
- const navigate = useNavigate();
+  const navigate = useNavigate();
 
 
   function handleEmailChange(event) {
@@ -37,45 +37,45 @@ function Inicio_sesion() {
     }
   }
 
-  const handleSubmit = async(event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-const raw = JSON.stringify({
-  email: email,
-  password: password
-});
+    var raw = JSON.stringify({
+      email: email,
+      password: password
+    });
 
-const requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
 
-try {
-  const response = await fetch 
-  ("http://localhost:8000/api/login", requestOptions);
-  if (response.ok){
-    const respuesta = await response.json();
-    localStorage.setItem("token", respuesta.token);
-    localStorage.setItem("id", respuesta.usuario.id);
-    localStorage.setItem("email", respuesta.usuario.email);
-    localStorage.setItem("name", respuesta.usuario.name);
-    navigate("/home")
-  }else{
-    const respuesta = await response.json();
-    alert(respuesta.error);
-  }
-  }catch(error){
-    alert(error.message)
-  }
+    try {
+      const response = await fetch
+        ("http://localhost:8000/api/login", requestOptions);
+      if (response.ok) {
+        const respuesta = await response.json();
+        localStorage.setItem("token", respuesta.token);
+        localStorage.setItem("id", respuesta.usuario.id);
+        localStorage.setItem("email", respuesta.usuario.email);
+        localStorage.setItem("name", respuesta.usuario.name);
+        navigate("/home")
+      } else {
+        const respuesta = await response.json();
+        alert(respuesta.error);
+      }
+    } catch (error) {
+      alert(error.message)
+    }
   }
   let title = "";
   let link = "";
-  let bgcolor= "";
+  let bgcolor = "";
 
   return (
     <div>
@@ -101,7 +101,7 @@ try {
             img={ojoCerrado}
           />
         </div>
-        <Link to="/home">
+
         <div className="button-sesion">
           <BotonRegistro
             txt="Continuar"
@@ -110,7 +110,7 @@ try {
           ></BotonRegistro>
           <p className="input-contraseña">¿Olvidaste tu contraseña?</p>
         </div>
-        </Link>
+
       </form>
       <div className="keyboard">
         <img src={teclado} alt="" className="image-keyboard" />

@@ -6,19 +6,35 @@ import InputComponent from "../../components/input/input";
 import { useState } from "react";
 import Modal from "../../components/modal/Modal";
 import musicaContextualModal from "../../assets/imagenes/Musica-contextual/preguntaContextual.png";
+
 function contextual() {
   let link = "";
   let title = "";
-  let bgcolor = "";
   let txt = "";
   let modaltitle = "";
   let modaltxt = "";
   let modalimg = null;
+  let bgcolor = "";
+
+
+  const [generosActivos, setGenerosActivos] = useState([]);
 
   const [modalVisible, setModalVisible] = useState(true);
 
   const ocultarModal = () => {
     setModalVisible(false);
+  };
+
+
+  const changeActive = (genero) => {
+    const indexGenero = generosActivos.findIndex((cadaGenero) => cadaGenero === genero)
+    const nuevosGeneros = [...generosActivos]
+    if (indexGenero === -1) {
+      nuevosGeneros.push(genero)
+    } else {
+      nuevosGeneros.splice(indexGenero, 1)
+    }
+    setGenerosActivos(nuevosGeneros)
   };
 
   return (
@@ -60,26 +76,29 @@ function contextual() {
       <div className="seleccionContextual">
         <h1 className="generos">Selecciona hasta 3 géneros</h1>
       </div>
+
       <div className="todosGeneros1">
-        <BotonRegistro txt="Rock" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Country" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Soul" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Jazz" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Blues" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Hip-hop" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Pop" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Reggae" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Folk" bgcolor="botonAjustable" />
-        <BotonRegistro txt="R&B" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Clásico" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Alternativo" bgcolor="botonAjustable" />
-        <BotonRegistro txt="Ambiente" bgcolor="botonAjustable" />
-        <BotonRegistro txt="EDM" bgcolor="botonAjustable" />
+        <BotonRegistro txt="Rock" active={generosActivos.includes("Rock")} onClick={() => changeActive("Rock")} />
+        <BotonRegistro txt="Country" />
+        <BotonRegistro txt="Soul" />
+        <BotonRegistro txt="Jazz" active={generosActivos.includes("Jazz")} onClick={() => changeActive("Jazz")} />
+
+        <BotonRegistro txt="Cumbia" active={generosActivos.includes("Cumbia")} onClick={() => changeActive("Cumbia")} />
+        <BotonRegistro txt="Hip-hop" />
+        <BotonRegistro txt="Pop" />
+        <BotonRegistro txt="Reggaeton" active={generosActivos.includes("Reggaeton")} onClick={() => changeActive("Reggaeton")} />
+
+        <BotonRegistro txt="Folklore" active={generosActivos.includes("Folklore")} onClick={() => changeActive("Folklore")} />
+        <BotonRegistro txt="R&B" />
+        <BotonRegistro txt="Clásico" />
+        <BotonRegistro txt="Alternativo" />
+        <BotonRegistro txt="Ambiente" />
+        <BotonRegistro txt="EDM" />
         <div className="todosGeneros2">
-          <BotonRegistro txt="Electrónica" bgcolor="botonAjustable" />
-          <BotonRegistro txt="Disco" bgcolor="botonAjustable" />
-          <BotonRegistro txt="New Age" bgcolor="botonAjustable" />
-          <BotonRegistro txt="Punk" bgcolor="botonAjustable" />
+          <BotonRegistro txt="Electrónica" />
+          <BotonRegistro txt="Disco" />
+          <BotonRegistro txt="New Age" />
+          <BotonRegistro txt="Punk" />
         </div>
       </div>
       <div>
