@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import teclado from "../../assets/imagenes/teclado/keyboard.svg";
 import ojoAbierto from "../../assets/icons/state=open.svg";
@@ -15,7 +15,7 @@ const Crear_cuenta = () => {
   const [buttonActive, setButtonActive] = useState(false);
   const [buttonColor, setButtonColor] = useState("inactivo");
   const [checkBoxChecked, setCheckBoxChecked] = useState(false);
-
+  const navigate = useNavigate();
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
@@ -46,8 +46,43 @@ const Crear_cuenta = () => {
     }
   }
 
-  function handleSubmit(event) {
+const handleSubmit = async(event) => {
     event.preventDefault();
+
+    
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  name: name,
+  password: password,
+});
+
+const requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+try {
+  const response = await fetch 
+  ("http://localhost:8000/api/register", requestOptions)
+  if (response.ok){
+    const respuesta = await response.json();
+    /* localStorage.setItem("token", respuesta.token); */
+    /* localStorage.setItem("id", respuesta.usuario.id); */
+    localStorage.setItem("name", respuesta.usuario.name);
+    localStorage.setItem("password", respuesta.usuario.password);
+    alert(
+      "El usuario ha sido registrado. Vuelva a la página principal para ingresar y acceder al menú")
+    navigate("/home")
+  }else{
+    const respuesta = await response.json();
+    alert(respuesta.error);
+  }
+  }catch(error){
+    alert(error.message)
+  }
   }
 
   let imgOnClick = "";
@@ -94,15 +129,14 @@ const Crear_cuenta = () => {
         </label>
         </div>
 
-        <Link to="/home">
+        
         <div className="cuenta-button-sesion">
-          <BotonRegistro
+          <BotonRegistro onClick={handleSubmit}
             txt="Continuar"
             bgcolor={buttonColor}
             disabled={!buttonActive}
           ></BotonRegistro>
         </div>
-        </Link>
       </form>
       <div className="cuenta-keyboard">
         <img src={teclado} alt="" className="cuenta-image-keyboard" />

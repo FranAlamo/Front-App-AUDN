@@ -74,7 +74,6 @@ function Inicio_sesion() {
     }
   }
   let title = "";
-  let link = "";
   let bgcolor = "";
 
   return (
@@ -101,7 +100,6 @@ function Inicio_sesion() {
             img={ojoCerrado}
           />
         </div>
-
         <div className="button-sesion">
           <BotonRegistro
             txt="Continuar"

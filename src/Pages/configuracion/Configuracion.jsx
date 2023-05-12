@@ -8,6 +8,16 @@ import '../configuracion/configuracion.css';
 import GeneralHeader from '../../components/generalheader/GeneralHeader';
 
 function Configuracion() {
+const navigate = useNavigate();
+
+    const cerrarSesion = (path) =>{
+        localStorage.removeItem('token');
+        localStorage.removeItem("id");
+        localStorage.removeItem("email");
+        localStorage.removeItem("name");
+        navigate(path)
+        
+    }
     let bgcolor = '';
     let txt = '';
     let link = '';
@@ -36,7 +46,12 @@ function Configuracion() {
                 <div className='bottom-config'>
                     <p>Versión: V1.25.03</p>
                     <div className='config-bar'></div>
+<<<<<<< HEAD
                     <p onClick={() => cerrarSesion('/')}>Cerrar Sesión</p>
+=======
+                    
+                    <button onClick={() => cerrarSesion('/')}>Cerrar Sesión</button>
+>>>>>>> 075680843cc8d06778cb5a47ab1b4ceb8a649b50
                 </div>
             </div>
         </div>
