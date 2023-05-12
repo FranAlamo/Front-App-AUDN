@@ -23,15 +23,7 @@ const navigate = useNavigate();
     let link = '';
     let title = '';
 
-    const navigate = useNavigate();
-
-    const cerrarSesion = (path) => {
-        localStorage.removeItem('token');
-        localStorage.removeItem("id");
-        localStorage.removeItem("email");
-        localStorage.removeItem("name");
-        navigate(path)
-    }
+   
     return (
         <div className='container'>
             <div className='configuracion'>
@@ -46,12 +38,7 @@ const navigate = useNavigate();
                 <div className='bottom-config'>
                     <p>Versión: V1.25.03</p>
                     <div className='config-bar'></div>
-<<<<<<< HEAD
                     <p onClick={() => cerrarSesion('/')}>Cerrar Sesión</p>
-=======
-                    
-                    <button onClick={() => cerrarSesion('/')}>Cerrar Sesión</button>
->>>>>>> 075680843cc8d06778cb5a47ab1b4ceb8a649b50
                 </div>
             </div>
         </div>
