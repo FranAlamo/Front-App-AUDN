@@ -92,7 +92,7 @@ const dataTop20 = [
   },
   {
     cancion: "Light My Fire",
-    artista: "The doors",
+    artista: "The Doors",
     image: theDoors,
   },
   {
@@ -138,7 +138,7 @@ const dataTop20 = [
   },
   {
     cancion: "Losing My Religion",
-    artista: "REM",
+    artista: "R.E.M.",
     image: rem,
   },
   {
