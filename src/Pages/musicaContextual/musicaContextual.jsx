@@ -3,7 +3,7 @@ import "../musicaContextual/musicaContextual.css";
 import BotonRegistro from "../../components/Boton/botonRegistro";
 import GeneralHeader from "../../components/generalheader/GeneralHeader";
 import InputComponent from "../../components/input/input";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../../components/modal/Modal";
 import musicaContextualModal from "../../assets/imagenes/Musica-contextual/preguntaContextual.png";
 
@@ -16,25 +16,60 @@ function contextual() {
   let modalimg = null;
   let bgcolor = "";
 
-
+  const [generos, setGeneros] = useState([]);
   const [generosActivos, setGenerosActivos] = useState([]);
 
   const [modalVisible, setModalVisible] = useState(true);
+
+  const cargarGeneros = async () => {
+    /* setdataTop20Todos(dataTop20); */
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", localStorage.getItem("token"));
+    myHeaders.append("Content-Type", "application/json");
+    const requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/generos",
+        requestOptions
+      ).then((response) => {
+        return response;
+      });
+      console.log(response);
+      if (response.ok) {
+        const respuesta = await response.json();
+        setGeneros(respuesta.generos);
+        console.log(respuesta);
+      } else {
+        alert("Ocurrio un error del lado del cliente");
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
+  useEffect(() => {
+    cargarGeneros();
+  }, []);
 
   const ocultarModal = () => {
     setModalVisible(false);
   };
 
-
   const changeActive = (genero) => {
-    const indexGenero = generosActivos.findIndex((cadaGenero) => cadaGenero === genero)
-    const nuevosGeneros = [...generosActivos]
+    const indexGenero = generosActivos.findIndex(
+      (cadaGenero) => cadaGenero === genero
+    );
+    const nuevosGeneros = [...generosActivos];
     if (indexGenero === -1) {
-      nuevosGeneros.push(genero)
+      nuevosGeneros.push(genero);
     } else {
-      nuevosGeneros.splice(indexGenero, 1)
+      nuevosGeneros.splice(indexGenero, 1);
     }
-    setGenerosActivos(nuevosGeneros)
+    setGenerosActivos(nuevosGeneros);
   };
 
   return (
@@ -78,28 +113,36 @@ function contextual() {
       </div>
 
       <div className="todosGeneros1">
-        <BotonRegistro txt="Rock" active={generosActivos.includes("Rock")} onClick={() => changeActive("Rock")} />
+        {generos.map((genero) => {
+          return (
+            <BotonRegistro
+              txt={genero.nombre_genero}
+              active={generosActivos.includes(genero.nombre_genero)}
+              onClick={() => changeActive(genero.nombre_genero)}
+            />
+          );
+        })}
+        {/* 
         <BotonRegistro txt="Country" />
-        <BotonRegistro txt="Soul" />
-        <BotonRegistro txt="Jazz" active={generosActivos.includes("Jazz")} onClick={() => changeActive("Jazz")} />
 
-        <BotonRegistro txt="Cumbia" active={generosActivos.includes("Cumbia")} onClick={() => changeActive("Cumbia")} />
-        <BotonRegistro txt="Hip-hop" />
         <BotonRegistro txt="Pop" />
-        <BotonRegistro txt="Reggaeton" active={generosActivos.includes("Reggaeton")} onClick={() => changeActive("Reggaeton")} />
 
-        <BotonRegistro txt="Folklore" active={generosActivos.includes("Folklore")} onClick={() => changeActive("Folklore")} />
-        <BotonRegistro txt="R&B" />
-        <BotonRegistro txt="Clásico" />
         <BotonRegistro txt="Alternativo" />
-        <BotonRegistro txt="Ambiente" />
+        <BotonRegistro txt="Hip-hop" />
+
+        <BotonRegistro txt="Electrónica" />
         <BotonRegistro txt="EDM" />
+
+        <BotonRegistro txt="R&B" />
+        <BotonRegistro txt="Soul" />
+        <BotonRegistro txt="Clásico" />
+        <BotonRegistro txt="Punk" />
+
         <div className="todosGeneros2">
-          <BotonRegistro txt="Electrónica" />
+          <BotonRegistro txt="Ambiente" />
           <BotonRegistro txt="Disco" />
           <BotonRegistro txt="New Age" />
-          <BotonRegistro txt="Punk" />
-        </div>
+        </div> */}
       </div>
       <div>
         <BotonRegistro bgcolor="crearPlaylist" txt="Crear playist" />
@@ -107,7 +150,5 @@ function contextual() {
     </div>
   );
 }
-
-
 
 export default contextual;

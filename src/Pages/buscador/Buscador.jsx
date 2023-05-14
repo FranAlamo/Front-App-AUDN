@@ -2,16 +2,13 @@ import React from "react";
 import NavBar from "../../components/navbarcomponent/NavBar";
 import "../buscador/buscador.css";
 import { useState, useEffect } from "react";
-import dataTop20 from "../../components/dataTop20";
 import InputComponent from "../../components/input/input";
-import lupa from '../../assets//icons/lupa.png';
-import { Link } from 'react-router-dom';
-
+import lupa from "../../assets//icons/lupa.png";
+import { Link } from "react-router-dom";
 
 function Buscador() {
   const [top20, setTop20] = useState([]);
-  let imgOnClick = '';
-  const [dataTop20Todos, setdataTop20Todos] = useState(dataTop20);
+  let imgOnClick = "";
   let bgcolor = "";
 
   const mostrarTodo = async () => {
@@ -39,6 +36,7 @@ function Buscador() {
       alert(error.message);
     }
   };
+
   useEffect(() => {
     mostrarTodo();
   }, []);
@@ -48,8 +46,12 @@ function Buscador() {
     <div className="titulo">
       <section className="buscadorTop">
         <h1 className="buscadorTitulo">Buscador</h1>
-        <Link to='/busquedas'>
-          <InputComponent bgcolor='buscadorGris' img={lupa} imgOnClick='/busquedas' />
+        <Link to="/busquedas">
+          <InputComponent
+            bgcolor="buscadorGris"
+            img={lupa}
+            imgOnClick="/busquedas"
+          />
         </Link>
         <h3 className="top20titulo" style={{ display: "inline-block" }}>
           Top 20s
@@ -57,11 +59,9 @@ function Buscador() {
         <hr
           style={{
             display: "inline-block",
-            marginLeft: "10px",
+            marginLeft: "18px",
             height: "1px",
-            width: "240px",
-            border: "none",
-            backgroundColor: "#E4E6E8",
+            width: "220px",
           }}
         />
       </section>
@@ -80,6 +80,7 @@ function Buscador() {
           <Card key={data.id} data={data} mostrarTodo={mostrarTodo} />
         ))}
       </div>
+
       <NavBar activeImage={"imagen2"} />
     </div>
   );
@@ -89,9 +90,9 @@ function Card(props) {
   const { data, mostrarTodo } = props;
 
   return (
-    <div className="card" onClick={mostrarTodo}>
+    <div className="cardContainer" onClick={mostrarTodo}>
       <img
-        src={data.image}
+        src={`../../imagenes${data.imagen}`}
         alt={data.artista}
         style={{ width: "152px", height: "152px" }}
       />
