@@ -40,7 +40,7 @@ function Inicio_sesion() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const myHeaders = new Headers();
+const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
@@ -73,6 +73,7 @@ function Inicio_sesion() {
       alert(error.message)
     }
   }
+
   let title = "";
   let bgcolor = "";
 
@@ -100,6 +101,10 @@ function Inicio_sesion() {
             img={ojoCerrado}
           />
         </div>
+<<<<<<< HEAD
+      
+=======
+>>>>>>> 96ea9e21fec3fb1c04c80e43ffed142a063e383e
         <div className="button-sesion">
           <BotonRegistro
             txt="Continuar"
@@ -108,7 +113,11 @@ function Inicio_sesion() {
           ></BotonRegistro>
           <p className="input-contraseña">¿Olvidaste tu contraseña?</p>
         </div>
+<<<<<<< HEAD
+        
+=======
 
+>>>>>>> 96ea9e21fec3fb1c04c80e43ffed142a063e383e
       </form>
       <div className="keyboard">
         <img src={teclado} alt="" className="image-keyboard" />
