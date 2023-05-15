@@ -61,10 +61,9 @@ function Cupido() {
         <div className='cupido'>
             {modalVisible && <Modal ocultarModal={ocultarModal} modaltitle='Cupido Musical' modaltxt='Luego de al menos 2 me gusta, confirma tu selección y crearemos una playlist rápida con los artistas que fueron un match' modalimg={cupidoimg} />}
             <GeneralHeader link='/home' title='Cupido Musical' />
+
             <div className='cupido-artist'>
                 {artistas.map(artista => {
-
-
                     return (
                         <TarjetaArtista
                             className='swipe'
@@ -90,20 +89,6 @@ function Cupido() {
 
         </div>
     )
-}
-
-function Card(props) {
-    const { data, mostrarTodo } = props;
-
-    return (
-        <div className="cupido-card" onClick={mostrarTodo}>
-            <img
-                src={data.image}
-                alt={data.artista}
-                style={{ width: "152px", height: "152px" }}
-            />
-        </div>
-    );
 }
 
 export default Cupido;

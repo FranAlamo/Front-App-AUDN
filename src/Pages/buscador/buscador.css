@@ -15,15 +15,10 @@ h1 {
   padding: 1rem 0;
   min-height: 80vh;
   padding-top: 220px;
-  background-color: aqua;
+  margin: auto;
+  padding-bottom: 100px;
 }
-.cardContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #010715;
-}
+
 .cancion {
   font-size: 14px;
   color: #26262e;
@@ -44,12 +39,10 @@ h1 {
   background-color: white;
   z-index: 2;
   position: fixed;
-  background: linear-gradient(
-    #f2ab5a 0.1%,
-    #ffcc91 1%,
-    #f3ebe2 10%,
-    rgb(255, 255, 255) 20%
-  );
+  background: linear-gradient(#f2ab5a 0.1%,
+      #ffcc91 1%,
+      #f3ebe2 10%,
+      rgb(255, 255, 255) 20%);
 }
 
 .buscadorTitulo {
@@ -59,4 +52,11 @@ h1 {
 
 .top20titulo {
   padding-top: 18px;
+}
+
+.artista-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 }

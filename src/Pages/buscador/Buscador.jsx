@@ -66,41 +66,23 @@ function Buscador() {
         />
       </section>
 
+
       <div className="mainBuscador">
-        <div>{console.log("1", top20)}
-          {top20.map((item) => (
-            <div key={item.id}>
-              <p>{item.nombre}</p>
-              <img src={item.imagen} alt={item.nombre} />
-            </div>
-          ))}
-        </div>
-        {console.log("2", dataTop20Todos)}
-        {dataTop20Todos.map((data) => (
-          <Card key={data.id} data={data} mostrarTodo={mostrarTodo} />
+        {top20.map((data) => (
+          <div className="artista-container" key={data.id}>
+            <img src={`../../imagenes${data.imagen}`} alt={data.nombre} style={{ width: "152px", height: "152px" }} />
+            <h4 className="cancion">{data.nombre}</h4>
+            <h4 className="artista">{data.artista}</h4>
+          </div>
         ))}
       </div>
+
+
 
       <NavBar activeImage={"imagen2"} />
     </div>
   );
 }
 
-function Card(props) {
-  const { data, mostrarTodo } = props;
-
-  return (
-    <div className="cardContainer" onClick={mostrarTodo}>
-      <img
-        src={`../../imagenes${data.imagen}`}
-        alt={data.artista}
-        style={{ width: "152px", height: "152px" }}
-      />
-
-      <h4 className="cancion">{mostrarTodo}</h4>
-      <h4 className="artista">{mostrarTodo}</h4>
-    </div>
-  );
-}
 
 export default Buscador;
