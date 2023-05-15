@@ -13,6 +13,7 @@ import Cupido from "./Pages/cupido/Cupido.jsx";
 import ErrorPage from "./Pages/404/ErrorPage.jsx";
 import Busquedas from "./Pages/busquedas/busquedas.jsx";
 import Crear_cuenta from "./Pages/crearCuenta/Crear_cuenta.jsx";
+import Playlist from "./Pages/playlist/Playlist.jsx";
 
 
 const router = createBrowserRouter([
@@ -48,6 +49,9 @@ const router = createBrowserRouter([
   },
   {
     path: "/registro/crearCuenta", element: <Crear_cuenta />, errorElement: <ErrorPage />,
+  },
+  {
+    path: "/playlist", element: <Playlist/> , errorElement: <ErrorPage />,
   },
 ]);
 
