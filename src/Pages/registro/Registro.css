@@ -33,13 +33,14 @@
 }
 .footerRegistro{
     width: 100%;
-    grid-column: 1;
-    grid-row: 2;
-    margin-top: 90px;
-    margin-left: 35px;
+
 }
 .keyboard{
     left: 0;
     width: 100%;
     z-index: -1;
+}
+
+.boton-fix {
+    margin: 20% 10% 10% 10%;
 }

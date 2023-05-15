@@ -10,6 +10,7 @@ import reload from "../../assets/icons/state=active.svg";
 import copia from "../../assets/imagenes/playlist-images/copia.png";
 import play from "../../assets/imagenes/playlist-images/play.png";
 import aleatorio from "../../assets/icons/state=active-1.svg";
+import threePoints from "../../assets/imagenes/playlist-images/three-points.png";
 
 function Playlist() {
 
@@ -19,6 +20,16 @@ function Playlist() {
   );
   const [canciones, setCanciones] = useState([]);
   const [cancionesFotos, setCancionesFotos] = useState([]);
+
+  function SongItem({ cancion }) {
+    return (
+      <div className="song-item">
+        <img src={`../../imagenes${cancion.imagen}`} className="img-song" />
+        <span className="song">{cancion.artista}</span>
+        <span className="artist">{cancion.nombre_genero}</span>
+      </div>
+    );
+  }
 
   const cargarMusicaPorGenero = async () => {
     const myHeaders = new Headers();
@@ -66,12 +77,25 @@ function Playlist() {
         <GeneralHeader title="Playlist Generada"> </GeneralHeader>
       </header>
       <div className="playlist-imagen">
-        <div className="img-song">
-          {cancionesFotos.map((cancion) => (
-            <div>
-              <img src={`../../imagenes${cancion.imagen}`} />
-            </div>
-          ))}
+        <div className="img" style={{ gridColumn: "2 / 3", gridRow: "1 / 2" }}>
+          {cancionesFotos[0] && cancionesFotos[0].imagen && (
+            <img src={`../../imagenes${cancionesFotos[0].imagen}`} />
+          )}
+        </div>
+        <div className="img" style={{ gridColumn: "3 / 4", gridRow: "1 / 2" }}>
+          {cancionesFotos[1] && cancionesFotos[1].imagen && (
+            <img src={`../../imagenes${cancionesFotos[1].imagen}`} />
+          )}
+        </div>
+        <div className="img" style={{ gridColumn: "2 / 3", gridRow: "2 / 3" }}>
+          {cancionesFotos[2] && cancionesFotos[2].imagen && (
+            <img src={`../../imagenes${cancionesFotos[2].imagen}`} />
+          )}
+        </div>
+        <div className="img" style={{ gridColumn: "3 / 4", gridRow: "2 / 3" }}>
+          {cancionesFotos[3] && cancionesFotos[3].imagen && (
+            <img src={`../../imagenes${cancionesFotos[3].imagen}`} />
+          )}
         </div>
       </div>
       <section className="playlist-minutos">
@@ -96,18 +120,24 @@ function Playlist() {
         </div>
       </section>
       <section className="playlist-container">
-        <div className="playlist-container_song">
-          <div></div>
-          <div className="songs-container">
-            {canciones.map((cancion) => (
-              <div>
-                <img src={`../../imagenes${cancion.imagen}`} />
-                <span>{cancion.artista}</span>
-                <span>{cancion.nombre_genero}</span>
-              </div>
-            ))}
+        {cancionesFotos.map((cancion) => (
+          <div className="playlist-container_song">
+            <div>
+              <img
+                src={`../../imagenes${cancion.imagen}`}
+                className="img-song"
+              />
+            </div>
+            <div className="songs-container">
+              <span className="song">{cancion.nombre}</span>
+              <span className="artist">{cancion.artista}</span>
+            </div>
+
+            <div className="points">
+              <img src={threePoints} alt="threePoints" />
+            </div>
           </div>
-        </div>
+        ))}
       </section>
       <div>
         <NavBar></NavBar>

@@ -73,11 +73,14 @@ function Registro() {
         </form>
       </section>
       <section className='footerRegistro'>
+        <div className='boton-fix'>
         <BotonRegistro txt="Continuar" onClick={handleSubmit}
           bgcolor={buttonColor}
           disabled={!buttonActive} />
-
+          </div>
+          
         <img src={teclado} alt="keyboard" className='keyboard' />
+    
       </section>
     </div>
   )
