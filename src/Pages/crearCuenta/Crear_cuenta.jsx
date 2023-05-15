@@ -37,7 +37,7 @@ const Crear_cuenta = () => {
   }, [email, password, checkBoxChecked]);
 
   function checkButtonActive() {
-    if (email.includes("@") && email.length >= 8 && password && checkBoxChecked) {
+    if (email && password && checkBoxChecked) {
       setButtonActive(true);
       setButtonColor("naranja");
     } else {
@@ -46,43 +46,42 @@ const Crear_cuenta = () => {
     }
   }
 
-const handleSubmit = async(event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    const emailUsuario = localStorage.getItem("email");
 
-    
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
-const raw = JSON.stringify({
-  name: name,
-  password: password,
-});
+    const raw = JSON.stringify({
+      email: emailUsuario,
+      name: email,
+      password: password,
+    });
 
-const requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
-try {
-  const response = await fetch 
-  ("http://localhost:8000/api/register", requestOptions)
-  if (response.ok){
-    const respuesta = await response.json();
-    /* localStorage.setItem("token", respuesta.token); */
-    /* localStorage.setItem("id", respuesta.usuario.id); */
-    localStorage.setItem("name", respuesta.usuario.name);
-    localStorage.setItem("password", respuesta.usuario.password);
-    alert(
-      "El usuario ha sido registrado. Vuelva a la página principal para ingresar y acceder al menú")
-    navigate("/home")
-  }else{
-    const respuesta = await response.json();
-    alert(respuesta.error);
-  }
-  }catch(error){
-    alert(error.message)
-  }
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    try {
+      const response = await fetch
+        ("http://localhost:8000/api/register", requestOptions)
+      if (response.ok) {
+        const respuesta = await response.json();
+        localStorage.setItem("name", respuesta.usuario.name);
+        localStorage.setItem("password", respuesta.usuario.password);
+        /* alert(
+          "El usuario ha sido registrado") */
+        navigate("/home")
+      } else {
+        const respuesta = await response.json();
+        alert(respuesta.error);
+      }
+    } catch (error) {
+      alert(error.message)
+    }
   }
 
   let imgOnClick = "";
@@ -119,17 +118,17 @@ try {
         </div>
 
         <div className="cuenta-checkbox">
-        <label>
-          <input
-            type="checkbox"
-            checked={checkBoxChecked}
-            onChange={handleCheckBoxChange}
-          />
-          He leído y acepto los Términos y Condiciones.
-        </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={checkBoxChecked}
+              onChange={handleCheckBoxChange}
+            />
+            He leído y acepto los Términos y Condiciones.
+          </label>
         </div>
 
-        
+
         <div className="cuenta-button-sesion">
           <BotonRegistro onClick={handleSubmit}
             txt="Continuar"

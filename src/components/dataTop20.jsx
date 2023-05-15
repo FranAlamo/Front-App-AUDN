@@ -1,28 +1,28 @@
-import chachoRamos from "../assets/imagenes/cumbia/chachoRamos.jpg";
-import laConga from "../assets/imagenes/cumbia/laConga.jpg";
-import braulioLopez from "../assets/imagenes/folklore/braulioLopez.jpg";
-import maciegas from "../assets/imagenes/folklore/maciegas.jpg";
-import amy from "../assets/imagenes/Jazz/amy.jpg";
-import aretha from "../assets/imagenes/Jazz/aretha.jpg";
-import louis from "../assets/imagenes/Jazz/louis.jpg";
-import nina from "../assets/imagenes/Jazz/nina.jpg";
-import jBalvin from "../assets/imagenes/regueton/jBalvin.jpg";
-import ozuna from "../assets/imagenes/regueton/ozuna.jpg";
-import guns from "../assets/imagenes/Rock/guns.jpg";
-import theDoors from "../assets/imagenes/Rock/theDoors.jpg";
-import theEagles from "../assets/imagenes/Rock/theEagles.jpg";
-import lucas from "../assets/imagenes/cumbia/lucasSugo.jpg";
-import becky from "../assets/imagenes/regueton/beckyG.jpg";
-import daddy from "../assets/imagenes/regueton/daddyYanquee.jpg";
-import pabloEstramin from "../assets/imagenes/folklore/pabloEstramin.jpg";
-import larbanois from "../assets/imagenes/folklore/larbanoisCarrero.jpg";
-import matias from "../assets/imagenes/cumbia/matiasValdez.jpg";
-import alfredo from "../assets/imagenes/folklore/zitarroza.jpg";
-import maluma from "../assets/imagenes/regueton/maluma.jpg";
-import norah from "../assets/imagenes/jazz/norah_jones1.jpg";
-import lospalmeras from "../assets/imagenes/cumbia/losPalmeras.jpg";
-import rolling from "../assets/imagenes/Rock/rollingStones.png";
-import rem from "../assets/imagenes/Rock/rem.jpg";
+/* import chachoRamos from "./imagenes/cumbia/chachoRamos.jpg";
+import laConga from "./imagenes/cumbia/laConga.jpg";
+import braulioLopez from "./imagenes/folklore/braulioLopez.jpg";
+import maciegas from "./imagenes/folklore/maciegas.jpg";
+import amy from "./imagenes/Jazz/amy.jpg";
+import aretha from "./imagenes/Jazz/aretha.jpg";
+import louis from "./imagenes/Jazz/louis.jpg";
+import nina from "./imagenes/Jazz/nina.jpg";
+import jBalvin from "./imagenes/regueton/jBalvin.jpg";
+import ozuna from "./imagenes/regueton/ozuna.jpg";
+import guns from "./imagenes/Rock/guns.jpg";
+import theDoors from "./imagenes/Rock/theDoors.jpg";
+import theEagles from "./imagenes/Rock/theEagles.jpg";
+import lucas from "./imagenes/cumbia/lucasSugo.jpg";
+import becky from "./imagenes/regueton/beckyG.jpg";
+import daddy from "./imagenes/regueton/daddyYanquee.jpg";
+import pabloEstramin from "./imagenes/folklore/pabloEstramin.jpg";
+import larbanois from "./imagenes/folklore/larbanoisCarrero.jpg";
+import matias from "./imagenes/cumbia/matiasValdez.jpg";
+import alfredo from "./imagenes/folklore/zitarroza.jpg";
+import maluma from "./imagenes/regueton/maluma.jpg";
+import norah from "./imagenes/jazz/norah_jones1.jpg";
+import lospalmeras from "./imagenes/cumbia/losPalmeras.jpg";
+import rolling from "./imagenes/Rock/rollingStones.png";
+import rem from "./imagenes/Rock/rem.jpg";
 const dataTop20 = [
   {
     cancion: "(I Cant get No) Satisfaction",
@@ -92,7 +92,7 @@ const dataTop20 = [
   },
   {
     cancion: "Light My Fire",
-    artista: "The doors",
+    artista: "The Doors",
     image: theDoors,
   },
   {
@@ -138,7 +138,7 @@ const dataTop20 = [
   },
   {
     cancion: "Losing My Religion",
-    artista: "REM",
+    artista: "R.E.M.",
     image: rem,
   },
   {
@@ -153,3 +153,4 @@ const dataTop20 = [
   },
 ];
 export default dataTop20;
+ */

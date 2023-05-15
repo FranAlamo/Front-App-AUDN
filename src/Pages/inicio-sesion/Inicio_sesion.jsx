@@ -40,7 +40,7 @@ function Inicio_sesion() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-const myHeaders = new Headers();
+    const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
@@ -101,6 +101,7 @@ const myHeaders = new Headers();
             img={ojoCerrado}
           />
         </div>
+      
         <div className="button-sesion">
           <BotonRegistro
             txt="Continuar"

@@ -28,8 +28,8 @@
 .ocasion,
 .sientes,
 .clima {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
   margin-bottom: 25px;
   color: #26262e;
   font-weight: bold;
@@ -40,11 +40,11 @@
   color: #26262e;
 }
 .todosGeneros1 {
-  margin-left: 6px;
+  margin-left: 5px;
   margin-right: 0.1px;
 }
 .todosGeneros2 {
-  margin-left: 12px;
+  margin-left: 2px;
 }
 .crearPlaylist {
   display: flex;
