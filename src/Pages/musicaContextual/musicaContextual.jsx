@@ -1,28 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../musicaContextual/musicaContextual.css";
+import musicaContextualModal from "../../assets/imagenes/Musica-contextual/preguntaContextual.png";
 import BotonRegistro from "../../components/Boton/botonRegistro";
 import GeneralHeader from "../../components/generalheader/GeneralHeader";
 import InputComponent from "../../components/input/input";
-import { useState, useEffect } from "react";
 import Modal from "../../components/modal/Modal";
-import musicaContextualModal from "../../assets/imagenes/Musica-contextual/preguntaContextual.png";
 
 function contextual() {
-  let link = "";
-  let title = "";
-  let txt = "";
-  let modaltitle = "";
-  let modaltxt = "";
-  let modalimg = null;
-  let bgcolor = "";
-
   const [generos, setGeneros] = useState([]);
+  const [buttonReady, setButtonReady] = useState(false);
   const [generosActivos, setGenerosActivos] = useState([]);
-
+  const navigate = useNavigate();
   const [modalVisible, setModalVisible] = useState(true);
 
   const cargarGeneros = async () => {
-    /* setdataTop20Todos(dataTop20); */
     const myHeaders = new Headers();
     myHeaders.append("Authorization", localStorage.getItem("token"));
     myHeaders.append("Content-Type", "application/json");
@@ -38,11 +30,10 @@ function contextual() {
       ).then((response) => {
         return response;
       });
-      console.log(response);
+
       if (response.ok) {
         const respuesta = await response.json();
         setGeneros(respuesta.generos);
-        console.log(respuesta);
       } else {
         alert("Ocurrio un error del lado del cliente");
       }
@@ -54,6 +45,14 @@ function contextual() {
   useEffect(() => {
     cargarGeneros();
   }, []);
+
+  useEffect(() => {
+    if (generosActivos.length) {
+      setButtonReady(true);
+    } else {
+      setButtonReady(false);
+    }
+  }, [generosActivos]);
 
   const ocultarModal = () => {
     setModalVisible(false);
@@ -70,6 +69,13 @@ function contextual() {
       nuevosGeneros.splice(indexGenero, 1);
     }
     setGenerosActivos(nuevosGeneros);
+  };
+
+  const goToPlaylist = () => {
+    if (generosActivos.length)
+      navigate("/home/musicacontextual/playlist", {
+        state: { generosActivos },
+      });
   };
 
   return (
@@ -122,8 +128,8 @@ function contextual() {
             />
           );
         })}
-        {/* 
-        <BotonRegistro txt="Country" />
+
+        {/* <BotonRegistro txt="Country" />
 
         <BotonRegistro txt="Pop" />
 
@@ -145,7 +151,12 @@ function contextual() {
         </div> */}
       </div>
       <div>
-        <BotonRegistro bgcolor="crearPlaylist" txt="Crear playist" />
+        <BotonRegistro
+          bgcolor="crearPlaylist"
+          txt="Crear playlist"
+          onClick={goToPlaylist}
+          active={buttonReady}
+        />
       </div>
     </div>
   );
