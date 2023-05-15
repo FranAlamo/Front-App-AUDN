@@ -8,6 +8,7 @@ import InputComponent from "../../components/input/input";
 import Modal from "../../components/modal/Modal";
 
 function contextual() {
+  const [generosQuery, setGenerosQuery] = useState()
   const [generos, setGeneros] = useState([]);
   const [buttonReady, setButtonReady] = useState(false);
   const [generosActivos, setGenerosActivos] = useState([]);
@@ -69,13 +70,18 @@ function contextual() {
       nuevosGeneros.splice(indexGenero, 1);
     }
     setGenerosActivos(nuevosGeneros);
+    setGenerosQuery(nuevosGeneros.join());
+    console.log(generosQuery);
   };
 
   const goToPlaylist = () => {
     if (generosActivos.length)
-      navigate("/home/musicacontextual/playlist", {
-        state: { generosActivos },
-      });
+      /* setGenerosQuery(generosActivos.join()); */
+      console.log(generosQuery);
+    navigate("/home/musicacontextual/playlist", {
+      state: { generosQuery },
+    });
+
   };
 
   return (

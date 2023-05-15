@@ -12,9 +12,10 @@ import play from "../../assets/imagenes/playlist-images/play.png";
 import aleatorio from "../../assets/icons/state=active-1.svg";
 
 function Playlist() {
-  const { state } = useLocation();
+
+  const { generoState } = useLocation();
   const [generos, setGeneros] = useState(
-    state.generosActivos ? state.generosActivos : []
+    generoState.generosQuery
   );
   const [canciones, setCanciones] = useState([]);
   const [cancionesFotos, setCancionesFotos] = useState([]);
@@ -30,15 +31,18 @@ function Playlist() {
     };
     try {
       const response = await fetch(
-        `http://localhost:8000/api/porGenero/${generos[0]}`,
+        `http://localhost:8000/api/porGenero?nombre_genero=${generos}`,
         requestOptions
       ).then((response) => {
+
         return response;
+
       });
 
       if (response.ok) {
         const respuesta = await response.json();
         setCanciones(respuesta.musica);
+        console.log(respuesta);
         if (respuesta.musica.length > 4) {
           setCancionesFotos(respuesta.musica.splice(0, 4));
         } else {
