@@ -119,6 +119,7 @@ const Crear_cuenta = () => {
         <div className="cuenta-checkbox">
           <label>
             <input
+            className="chekbox"
               type="checkbox"
               checked={checkBoxChecked}
               onChange={handleCheckBoxChange}

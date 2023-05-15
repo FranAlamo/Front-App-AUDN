@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import teclado from "../../assets/imagenes/teclado/keyboard.svg";
 import ojoAbierto from "../../assets/icons/state=open.svg";
@@ -94,14 +94,16 @@ function Inicio_sesion() {
         <div className="input-container">
           <p>Contraseña</p>
           <InputComponent
-            bgcolor="inputComponent"
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-            img={ojoCerrado}
+         bgcolor="inputComponent"
+         type="password"
+         value={password}
+         onChange={handlePasswordChange}
+         img={ojoCerrado}
+         imgOpen={ojoAbierto}
+         imgClosed={ojoCerrado}
           />
         </div>
-
+      
         <div className="button-sesion">
           <BotonRegistro
             txt="Continuar"

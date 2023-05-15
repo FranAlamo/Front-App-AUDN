@@ -13,41 +13,68 @@ import Cupido from "./Pages/cupido/Cupido.jsx";
 import ErrorPage from "./Pages/404/ErrorPage.jsx";
 import Busquedas from "./Pages/busquedas/busquedas.jsx";
 import Crear_cuenta from "./Pages/crearCuenta/Crear_cuenta.jsx";
-
+import Playlist from "./Pages/playlist/Playlist.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/", element: <Inicio />, errorElement: <ErrorPage />,
+    path: "/",
+    element: <Inicio />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/registro", element: <Registro />, errorElement: <ErrorPage />,
+    path: "/registro",
+    element: <Registro />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/home", element: <Home />, errorElement: <ErrorPage />,
+    path: "/home",
+    element: <Home />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/buscador", element: <Buscador />, errorElement: <ErrorPage />,
+    path: "/buscador",
+    element: <Buscador />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/perfil", element: <Perfil />, errorElement: <ErrorPage />,
+    path: "/perfil",
+    element: <Perfil />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/configuracion", element: <Configuracion />, errorElement: <ErrorPage />,
+    path: "/configuracion",
+    element: <Configuracion />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/home/musicacontextual", element: <MusicaContextual />, errorElement: <ErrorPage />,
+    path: "/home/musicacontextual",
+    element: <MusicaContextual />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/sesion", element: <Inicio_sesion />, errorElement: <ErrorPage />,
+    path: "/home/musicacontextual/playlist",
+    element: <Playlist />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/home/cupido", element: <Cupido />, errorElement: <ErrorPage />,
+    path: "/sesion",
+    element: <Inicio_sesion />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/busquedas", element: <Busquedas />, errorElement: <ErrorPage />,
+    path: "/home/cupido",
+    element: <Cupido />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/registro/crearCuenta", element: <Crear_cuenta />, errorElement: <ErrorPage />,
+    path: "/busquedas",
+    element: <Busquedas />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/registro/crearCuenta",
+    element: <Crear_cuenta />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
