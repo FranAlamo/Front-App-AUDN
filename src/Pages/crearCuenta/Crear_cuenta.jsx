@@ -71,10 +71,9 @@ const Crear_cuenta = () => {
       if (response.ok) {
         const respuesta = await response.json();
         localStorage.setItem("name", respuesta.usuario.name);
-        localStorage.setItem("password", respuesta.usuario.password);
-        /* alert(
-          "El usuario ha sido registrado") */
-        navigate("/home")
+        localStorage.setItem("email", respuesta.usuario.email);
+        alert(respuesta.mensaje)
+        navigate("/sesion")
       } else {
         const respuesta = await response.json();
         alert(respuesta.error);
