@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import teclado from "../../assets/imagenes/teclado/keyboard.svg";
 import ojoAbierto from "../../assets/icons/state=open.svg";
@@ -101,10 +101,6 @@ const myHeaders = new Headers();
             img={ojoCerrado}
           />
         </div>
-<<<<<<< HEAD
-      
-=======
->>>>>>> 96ea9e21fec3fb1c04c80e43ffed142a063e383e
         <div className="button-sesion">
           <BotonRegistro
             txt="Continuar"
@@ -113,11 +109,7 @@ const myHeaders = new Headers();
           ></BotonRegistro>
           <p className="input-contraseña">¿Olvidaste tu contraseña?</p>
         </div>
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 96ea9e21fec3fb1c04c80e43ffed142a063e383e
       </form>
       <div className="keyboard">
         <img src={teclado} alt="" className="image-keyboard" />
