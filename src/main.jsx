@@ -9,11 +9,10 @@ import Inicio from "./Pages/inicio/Inicio.jsx";
 import MusicaContextual from "./Pages/musicaContextual/musicaContextual.jsx";
 import Registro from "./Pages/registro/Registro.jsx";
 import Inicio_sesion from "./Pages/inicio-sesion/Inicio_sesion.jsx";
-import Cupido from "./Pages/cupido/cupido.jsx";
+import Cupido from "./Pages/cupido/Cupido.jsx";
 import ErrorPage from "./Pages/404/ErrorPage.jsx";
 import Busquedas from "./Pages/busquedas/busquedas.jsx";
 import Crear_cuenta from "./Pages/crearCuenta/Crear_cuenta.jsx";
-import Playlist from "./Pages/playlist_generada/Playlist.jsx";
 
 
 const router = createBrowserRouter([
@@ -49,9 +48,6 @@ const router = createBrowserRouter([
   },
   {
     path: "/registro/crearCuenta", element: <Crear_cuenta />, errorElement: <ErrorPage />,
-  },
-  {
-    path: "/musicacontextual/playlist", element: <Playlist/>, errorElement: <ErrorPage />,
   },
 ]);
 

@@ -6,7 +6,7 @@ import GeneralHeader from '../../components/generalheader/GeneralHeader';
 import BotonRegistro from '../../components/Boton/botonRegistro';
 import cupidoimg from '../../assets/imagenes/Cupido-musical/step=6.png';
 import TarjetaArtista from 'react-tinder-card';
-import dataTop20 from "../../components/dataTop20";
+
 
 function Cupido() {
     const [artistas, setArtistas] = useState([]);
@@ -63,7 +63,7 @@ function Cupido() {
             <GeneralHeader link='/home' title='Cupido Musical' />
             <div className='cupido-artist'>
                 {artistas.map(artista => {
-                    const imagen = dataTop20.find(i => i.artista === artista.artista);
+
 
                     return (
                         <TarjetaArtista
@@ -73,7 +73,7 @@ function Cupido() {
                         >
                             <div className='tarjeta'>
                                 <div className='tarjeta-img'>
-                                    {imagen && <img className='artista-img' src={imagen.image} alt={artista.artista} />}
+                                    <img className='artista-img' src={`../../imagenes${artista.imagen}`} />
                                 </div>
                                 <p>{artista.artista}</p>
                             </div>
