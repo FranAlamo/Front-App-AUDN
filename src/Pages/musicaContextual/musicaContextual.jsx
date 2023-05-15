@@ -10,10 +10,13 @@ import Modal from "../../components/modal/Modal";
 function contextual() {
   const [generosQuery, setGenerosQuery] = useState()
   const [generos, setGeneros] = useState([]);
-  const [buttonReady, setButtonReady] = useState(false);
   const [generosActivos, setGenerosActivos] = useState([]);
   const navigate = useNavigate();
   const [modalVisible, setModalVisible] = useState(true);
+  const [buttonColor, setButtonColor] = useState("inactivo");
+  const [buttonActive, setButtonActive] = useState(false);
+
+
 
   const cargarGeneros = async () => {
     const myHeaders = new Headers();
@@ -49,9 +52,11 @@ function contextual() {
 
   useEffect(() => {
     if (generosActivos.length) {
-      setButtonReady(true);
+      setButtonActive(true);
+      setButtonColor("naranja");
     } else {
-      setButtonReady(false);
+      setButtonActive(false);
+      setButtonColor("inactivo");
     }
   }, [generosActivos]);
 
@@ -134,7 +139,9 @@ function contextual() {
             />
           );
         })}
-
+        <BotonRegistro txt="Ambiente" />
+        <BotonRegistro txt="Disco" />
+        <BotonRegistro txt="New Age" />
         {/* <BotonRegistro txt="Country" />
 
         <BotonRegistro txt="Pop" />
@@ -151,17 +158,15 @@ function contextual() {
         <BotonRegistro txt="Punk" />
 
         <div className="todosGeneros2">
-          <BotonRegistro txt="Ambiente" />
-          <BotonRegistro txt="Disco" />
-          <BotonRegistro txt="New Age" />
+          
         </div> */}
       </div>
-      <div>
+      <div className="boton-container">
         <BotonRegistro
-          bgcolor="crearPlaylist"
+          bgcolor={buttonColor}
           txt="Crear playlist"
           onClick={goToPlaylist}
-          active={buttonReady}
+          disabled={!buttonActive}
         />
       </div>
     </div>

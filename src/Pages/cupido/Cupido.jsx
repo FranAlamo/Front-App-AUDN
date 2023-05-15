@@ -99,7 +99,7 @@ function Cupido() {
     };
 
     useEffect(() => {
-        if (artistasFavoritos.length === 2) {
+        if (artistasFavoritos.length > 1) {
             setButtonActive(true);
             setButtonColor("naranja");
         } else {
