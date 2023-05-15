@@ -16,22 +16,19 @@ function Buscador() {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", localStorage.getItem("token"));
     myHeaders.append("Content-Type", "application/json");
+
     const requestOptions = {
-      method: "GET",
+      method: 'GET',
       headers: myHeaders,
-      redirect: "follow",
+      redirect: 'follow'
     };
     try {
-      const response = await fetch(
-        "http://localhost:8000/api/top20",
-        requestOptions
-      ).then((response) => {
-        return response;
-      });
-      console.log(response);
+      const response = await fetch("http://localhost:8000/api/top20", requestOptions).then(response => { return response });
+      console.log(response)
       if (response.ok) {
         const respuesta = await response.json();
         setTop20(respuesta.musica);
+        console.log(respuesta)
       } else {
         alert("Ocurrio un error del lado del cliente");
       }
@@ -45,7 +42,8 @@ function Buscador() {
   }, []);
 
   return (
-    <>
+
+    <div className="titulo">
       <section className="buscadorTop">
         <h1 className="buscadorTitulo">Buscador</h1>
         <Link to="/busquedas">
@@ -69,15 +67,22 @@ function Buscador() {
       </section>
 
       <div className="mainBuscador">
-        <div>
+        <div>{console.log("1", top20)}
           {top20.map((item) => (
-            <Card key={item.id} data={item} mostrarTodo={mostrarTodo} />
+            <div key={item.id}>
+              <p>{item.nombre}</p>
+              <img src={item.imagen} alt={item.nombre} />
+            </div>
           ))}
         </div>
+        {console.log("2", dataTop20Todos)}
+        {dataTop20Todos.map((data) => (
+          <Card key={data.id} data={data} mostrarTodo={mostrarTodo} />
+        ))}
       </div>
 
       <NavBar activeImage={"imagen2"} />
-    </>
+    </div>
   );
 }
 
@@ -92,8 +97,8 @@ function Card(props) {
         style={{ width: "152px", height: "152px" }}
       />
 
-      <h4 className="cancion">{data.nombre}</h4>
-      <h4 className="artista">{data.artista}</h4>
+      <h4 className="cancion">{mostrarTodo}</h4>
+      <h4 className="artista">{mostrarTodo}</h4>
     </div>
   );
 }
