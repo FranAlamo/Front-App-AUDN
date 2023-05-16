@@ -133,8 +133,7 @@ body {
   
   .points {
     display: flex;
-    
-    margin-left: 5%;
+    margin-left: auto; 
   }
   
   .points img {
@@ -147,14 +146,14 @@ body {
     display: flex;
     gap: 8px;
     margin-bottom: 2%;
-  
+    justify-content: space-between;
   }
 
   .songs-container {
     display: flex;
     flex-direction: column;
   justify-content: center;
-  
+  margin-right: auto;
   }
   
   .song {

@@ -49,8 +49,9 @@ function Buscador() {
         <Link to="/busquedas">
           <InputComponent
             bgcolor="buscadorGris"
-            img={lupa}
+            img2={lupa}
             imgOnClick="/busquedas"
+
           />
         </Link>
         <h3 className="top20titulo" style={{ display: "inline-block" }}>

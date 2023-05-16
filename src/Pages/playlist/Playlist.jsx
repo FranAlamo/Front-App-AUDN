@@ -29,7 +29,7 @@ function Playlist() {
       </div>
     );
   }
-
+  
   const cargarMusicaPorGenero = async () => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", localStorage.getItem("token"));
