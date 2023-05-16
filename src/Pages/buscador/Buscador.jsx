@@ -2,13 +2,13 @@ import React from "react";
 import NavBar from "../../components/navbarcomponent/NavBar";
 import "../buscador/buscador.css";
 import { useState, useEffect } from "react";
-import InputComponent from "../../components/input/input";
-import lupa from "../../assets//icons/lupa.png";
+import lupa from "../../assets/icons/lupa.png";
 import { Link } from "react-router-dom";
+import InputBuscador from "../../components/InputBuscador/InputBuscador";
 
 function Buscador() {
   const [top20, setTop20] = useState([]);
-  let imgOnClick = "";
+  let path = "";
   let bgcolor = "";
 
   const mostrarTodo = async () => {
@@ -47,10 +47,10 @@ function Buscador() {
       <section className="buscadorTop">
         <h1 className="buscadorTitulo">Buscador</h1>
         <Link to="/busquedas">
-          <InputComponent
+          <InputBuscador
             bgcolor="buscadorGris"
             img={lupa}
-            imgOnClick="/busquedas"
+            path="/busquedas"
           />
         </Link>
         <h3 className="top20titulo" style={{ display: "inline-block" }}>

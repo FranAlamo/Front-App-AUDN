@@ -11,7 +11,7 @@ import Registro from "./Pages/registro/Registro.jsx";
 import Inicio_sesion from "./Pages/inicio-sesion/Inicio_sesion.jsx";
 import Cupido from "./Pages/cupido/Cupido.jsx";
 import ErrorPage from "./Pages/404/ErrorPage.jsx";
-import Busquedas from "./Pages/busquedas/busquedas.jsx";
+import Busquedas from "./Pages/busquedas/Busquedas.jsx";
 import Crear_cuenta from "./Pages/crearCuenta/Crear_cuenta.jsx";
 import Playlist from "./Pages/playlist/Playlist.jsx";
 

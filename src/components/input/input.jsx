@@ -6,6 +6,8 @@ function InputComponent(props) {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
+
+
   const handleImageClick = (path) => {
     navigate(path);
   };

@@ -3,6 +3,7 @@ import InputComponent from '../../components/input/input.jsx'
 import '../busquedas/busquedas.css';
 import teclado from '../../assets/imagenes/teclado/keyboard.svg';
 import arrow from '../../assets/icons/flecha-atras.svg';
+import InputBuscador from '../../components/InputBuscador/InputBuscador.jsx';
 
 function Busquedas() {
     const [artistas, setArtistas] = useState([]);
@@ -42,7 +43,7 @@ function Busquedas() {
     return (
         <div className='busquedas-container'>
             <div className="buscadorInput">
-                <InputComponent bgcolor='buscadorGris' img={arrow} imgOnClick='/buscador' />
+                <InputBuscador bgcolor='buscadorGris' img={arrow} path="/buscador" />
 
                 <div className='title-container'>
                     <p className="first-p">Búsquedas Recientes:</p>

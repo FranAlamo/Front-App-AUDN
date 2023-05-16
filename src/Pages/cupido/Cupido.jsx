@@ -119,7 +119,7 @@ function Cupido() {
                 <div
                     className='swipe'
                     key={artistas[currentArtist]?.artista}
-                    preventSwipe={['up', 'down']}
+
                 >
                     <div className='tarjeta'>
                         <div className='tarjeta-img'>
