@@ -32,7 +32,7 @@ function Playlist() {
       </div>
     );
   }
-
+  
   const cargarMusicaPorArtista = async () => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", localStorage.getItem("token"));
