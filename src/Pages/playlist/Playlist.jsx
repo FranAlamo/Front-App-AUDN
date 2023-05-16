@@ -14,8 +14,11 @@ import threePoints from "../../assets/imagenes/playlist-images/three-points.png"
 
 function Playlist() {
   const { state } = useLocation();
+  const [artistas, setArtistas] = useState(
+    state.artistasQuery
+  );
   const [generos, setGeneros] = useState(
-    state.generosActivos ? state.generosActivos : []
+    state.generosQuery
   );
   const [canciones, setCanciones] = useState([]);
   const [cancionesFotos, setCancionesFotos] = useState([]);
@@ -30,7 +33,7 @@ function Playlist() {
     );
   }
   
-  const cargarMusicaPorGenero = async () => {
+  const cargarMusicaPorArtista = async () => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", localStorage.getItem("token"));
     myHeaders.append("Content-Type", "application/json");
@@ -41,17 +44,20 @@ function Playlist() {
     };
     try {
       const response = await fetch(
-        `http://localhost:8000/api/porGenero/${generos[0]}`,
+        `http://localhost:8000/api/porArtista?artista=${artistas}`,
         requestOptions
       ).then((response) => {
+
         return response;
+
       });
 
       if (response.ok) {
         const respuesta = await response.json();
         setCanciones(respuesta.musica);
+        console.log(respuesta);
         if (respuesta.musica.length > 4) {
-          setCancionesFotos(respuesta.musica.splice(0, 4));
+          setCancionesFotos(respuesta.musica);
         } else {
           setCancionesFotos(respuesta.musica);
         }
@@ -63,58 +69,110 @@ function Playlist() {
     }
   };
 
-  useEffect(() => {
-    if (generos.length) cargarMusicaPorGenero();
-  }, [generos]);
+
+
+  const cargarMusicaPorGenero = async () => {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", localStorage.getItem("token"));
+    myHeaders.append("Content-Type", "application/json");
+    const requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+    try {
+      const response = await fetch(
+        `http://localhost:8000/api/porGenero?nombre_genero=${generos}`,
+        requestOptions
+      ).then((response) => {
+
+        return response;
+
+      });
+
+      if (response.ok) {
+        const respuesta = await response.json();
+        setCanciones(respuesta.musica);
+        console.log(respuesta);
+        if (respuesta.musica.length > 4) {
+          setCancionesFotos(respuesta.musica);
+        } else {
+          setCancionesFotos(respuesta.musica);
+        }
+      } else {
+        alert("Ocurrio un error del lado del cliente");
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+  try {
+    if (artistas !== undefined) {
+      useEffect(() => {
+        cargarMusicaPorArtista();
+      }, [artistas]);
+    } else {
+      useEffect(() => {
+        cargarMusicaPorGenero();
+      }, [generos]);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
+
 
   return (
     <div>
-      <header>
-        <GeneralHeader title="Playlist Generada"> </GeneralHeader>
-      </header>
-      <div className="playlist-imagen">
-        <div className="img" style={{ gridColumn: "2 / 3", gridRow: "1 / 2" }}>
-          {cancionesFotos[0] && cancionesFotos[0].imagen && (
-            <img src={`../../imagenes${cancionesFotos[0].imagen}`} />
-          )}
+      <div className="top-container-playlist">
+        <header>
+          <GeneralHeader link="/home" title="Playlist Generada"> </GeneralHeader>
+        </header>
+
+        <div className="playlist-imagen">
+          <div className="img" style={{ gridColumn: "2 / 3", gridRow: "1 / 2" }}>
+            {cancionesFotos[0] && cancionesFotos[0].imagen && (
+              <img src={`../../imagenes${cancionesFotos[0].imagen}`} />
+            )}
+          </div>
+          <div className="img" style={{ gridColumn: "3 / 4", gridRow: "1 / 2" }}>
+            {cancionesFotos[1] && cancionesFotos[1].imagen && (
+              <img src={`../../imagenes${cancionesFotos[1].imagen}`} />
+            )}
+          </div>
+          <div className="img" style={{ gridColumn: "2 / 3", gridRow: "2 / 3" }}>
+            {cancionesFotos[2] && cancionesFotos[2].imagen && (
+              <img src={`../../imagenes${cancionesFotos[2].imagen}`} />
+            )}
+          </div>
+          <div className="img" style={{ gridColumn: "3 / 4", gridRow: "2 / 3" }}>
+            {cancionesFotos[3] && cancionesFotos[3].imagen && (
+              <img src={`../../imagenes${cancionesFotos[3].imagen}`} />
+            )}
+          </div>
         </div>
-        <div className="img" style={{ gridColumn: "3 / 4", gridRow: "1 / 2" }}>
-          {cancionesFotos[1] && cancionesFotos[1].imagen && (
-            <img src={`../../imagenes${cancionesFotos[1].imagen}`} />
-          )}
-        </div>
-        <div className="img" style={{ gridColumn: "2 / 3", gridRow: "2 / 3" }}>
-          {cancionesFotos[2] && cancionesFotos[2].imagen && (
-            <img src={`../../imagenes${cancionesFotos[2].imagen}`} />
-          )}
-        </div>
-        <div className="img" style={{ gridColumn: "3 / 4", gridRow: "2 / 3" }}>
-          {cancionesFotos[3] && cancionesFotos[3].imagen && (
-            <img src={`../../imagenes${cancionesFotos[3].imagen}`} />
-          )}
-        </div>
+        <section className="playlist-minutos">
+          <div className="playlist-compartir">
+            <img src={logoSmall} alt="logo-small" className="img-logo" />
+            <img src={check} alt="check" className="img-check" />
+            <img src={compartir} alt="compartir" className="img-compartir" />
+          </div>
+          <div className="playlist-minutos_reload">
+            <p></p>
+            <img src={reload} alt="reload" className="img-reload" />
+          </div>
+        </section>
+        <section className="playlist-play">
+          <div className="playlist-copia">
+            <img src={copia} alt="copia" className="img-copia" />
+            <p>Crear Copia</p>
+          </div>
+          <div className="playlist-boton_play">
+            <img src={aleatorio} alt="aleatorio" className="img-aleatorio" />
+            <img src={play} alt="play" className="img-play" />
+          </div>
+        </section>
       </div>
-      <section className="playlist-minutos">
-        <div className="playlist-compartir">
-          <img src={logoSmall} alt="logo-small" className="img-logo" />
-          <img src={check} alt="check" className="img-check" />
-          <img src={compartir} alt="compartir" className="img-compartir" />
-        </div>
-        <div className="playlist-minutos_reload">
-          <p></p>
-          <img src={reload} alt="reload" className="img-reload" />
-        </div>
-      </section>
-      <section className="playlist-play">
-        <div className="playlist-copia">
-          <img src={copia} alt="copia" className="img-copia" />
-          <p>Crear Copia</p>
-        </div>
-        <div className="playlist-boton_play">
-          <img src={aleatorio} alt="aleatorio" className="img-aleatorio" />
-          <img src={play} alt="play" className="img-play" />
-        </div>
-      </section>
       <section className="playlist-container">
         {cancionesFotos.map((cancion) => (
           <div className="playlist-container_song">
