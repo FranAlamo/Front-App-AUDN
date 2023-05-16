@@ -1,0 +1,89 @@
+button {
+  width: 320px;
+  top: 16px;
+  left: 16px;
+  gap: 12px;
+  height: 48px;
+  border: 1px solid #ff8e0a;
+  border-radius: 4px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px, 16px, 12px, 16px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.negro {
+  background-color: #000000;
+  color: white;
+}
+
+.naranja {
+  background-color: #ff8e0a;
+  color: white;
+}
+
+.botonAjustable {
+  padding: 2px;
+  width: fit-content;
+  border: solid 2px #26262e;
+  color: #26262e;
+  background-color: transparent;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-right: 10px;
+  letter-spacing: 0.5px;
+}
+
+.botonAjustableNegro {
+  background-color: black;
+  padding: 2px;
+  width: fit-content;
+  border: solid 2px #26262e;
+  color: white;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-right: 10px;
+  letter-spacing: 0.5px;
+}
+
+.bordeNegro {
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+.inactivo {
+  background-color: #E4E6E8;
+  color: white;
+  border: none;
+
+}
+
+.musicaContextualBordes {
+  border: solid 2px #26262e;
+}
+
+.crearPlaylist {
+  margin-top: 25px;
+  border: solid 1px #e4e6e8;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+.botonCupido {
+  width: 65vw;
+  background-color: #000000;
+  color: white;
+  border: none;
+}
+
+.cupido-button {
+  border: none;
+  margin: 10%;
+  color: white;
+}

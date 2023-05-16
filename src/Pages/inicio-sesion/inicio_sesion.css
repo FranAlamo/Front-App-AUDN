@@ -1,0 +1,51 @@
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.keyboard {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.image-keyboard {
+    width: 100vw;
+}
+
+.form-body {
+  text-align: center;
+  margin-top: 15%;
+}
+
+.input-container {
+   width: 80%;
+   margin: 0 10% 14% 10%;
+}
+
+.input-container p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Rubik';
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    color: #26262E;
+ text-align: left;
+ font-weight: bold;
+}
+
+.input-contraseña {
+    font-size: 16px;
+    font-family:'Rubik';
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-top: 10%;
+    font-weight: bold;
+}
+
+.button-sesion {
+    margin-top: 18%;
+}
+

@@ -1,0 +1,101 @@
+.cuenta-keyboard {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.cuenta-image-keyboard {
+  width: 100vw;
+}
+
+.cuenta-form-body {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.cuenta-input-container {
+  width: 80%;
+  margin: 0 10% 9% 10%;
+}
+
+.texto1 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "Rubik";
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  color: #26262e;
+  text-align: left;
+  font-weight: bold;
+}
+
+.input-contraseña {
+  font-size: 16px;
+  font-family: "Rubik";
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-top: 10%;
+  font-weight: bold;
+}
+
+.cuenta-titulo {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.cuenta-titulo p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-size: 26px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #26262e;
+  font-weight: bold;
+}
+
+.texto2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: #838486;
+  text-align: left;
+  margin-top: 2%;
+}
+
+.cuenta-checkbox {
+  width: 320px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-family: "Rubik";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+}
+
+.cuenta-checkbox label {
+  display: flex;
+  align-items: center;
+}
+
+#terms {
+  cursor: pointer;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.chekbox {
+  width: 16px;
+  border-radius: 2px;
+  border: 1px solid #838486;
+  margin-right: 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.header {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  width: 82%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 9%;
+  margin-right: 9%;
+}
+
+.notificacionInicio {
+  height: 40%;
+}
+.relojInicio {
+  height: 40%;
+  padding-right: 15px;
+}
+.seccionNotificaciones {
+  width: 120px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+.tituloHeaderInicio {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.general-header {
+  padding-top: 5vh;
+  background: linear-gradient(#ff880031 20%,
+          #ff880021 60%,
+          rgb(255, 255, 255) 85%);
+  position: relative;
+  display: flex;
+}
