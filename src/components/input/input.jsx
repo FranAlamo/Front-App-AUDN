@@ -8,10 +8,6 @@ function InputComponent(props) {
 
 
 
-  const handleImageClick = (path) => {
-    navigate(path);
-  };
-
   const handleToggleShowPassword = () => {
     setShowPassword(!showPassword);
   };

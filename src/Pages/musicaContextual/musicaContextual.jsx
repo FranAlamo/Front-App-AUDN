@@ -76,16 +76,14 @@ function contextual() {
     }
     setGenerosActivos(nuevosGeneros);
     setGenerosQuery(nuevosGeneros.join());
-    console.log(generosQuery);
+
   };
 
   const goToPlaylist = () => {
     if (generosActivos.length)
-      /* setGenerosQuery(generosActivos.join()); */
-      console.log(generosQuery);
-    navigate("/home/musicacontextual/playlist", {
-      state: { generosQuery },
-    });
+      navigate("/home/musicacontextual/playlist", {
+        state: { generosQuery },
+      });
 
   };
 

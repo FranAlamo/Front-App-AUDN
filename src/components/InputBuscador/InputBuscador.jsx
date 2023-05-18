@@ -18,7 +18,8 @@ function InputBuscador(props) {
             ) : null}
             <input
                 className="input"
-
+                onChange={props.onChange}
+                value={props.value}
             />
         </div>
     );

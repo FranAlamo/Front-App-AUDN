@@ -78,3 +78,83 @@
     font-weight: bold;
     font-size: 14px;
 }
+
+.searches-container {
+    position: absolute;
+    width: 368px;
+    height: 600px;
+    left: 0px;
+    top: 160px;
+    overflow-y: scroll;
+}
+
+.trend-grid {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0px;
+    gap: 16px;
+
+    position: absolute;
+    width: 320px;
+    /*   height: 2184px;
+ */
+    left: calc(50% - 320px/2);
+    top: 0px;
+}
+
+.search-song-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+
+    width: 320px;
+    height: 48px;
+    display: flex;
+}
+
+.search-song-image {
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+}
+
+
+.search-song-image>img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.search-song-title {
+    width: 218px;
+    height: 18px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #26262E;
+}
+
+.search-song-artist {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #838486;
+
+}
+
+.song-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #26262e;
+}
+
+.oculto {
+    display: none;
+}

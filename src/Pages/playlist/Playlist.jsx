@@ -32,7 +32,7 @@ function Playlist() {
       </div>
     );
   }
-  
+
   const cargarMusicaPorArtista = async () => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", localStorage.getItem("token"));
@@ -55,7 +55,7 @@ function Playlist() {
       if (response.ok) {
         const respuesta = await response.json();
         setCanciones(respuesta.musica);
-        console.log(respuesta);
+
         if (respuesta.musica.length > 4) {
           setCancionesFotos(respuesta.musica);
         } else {
@@ -106,6 +106,7 @@ function Playlist() {
       alert(error.message);
     }
   };
+
   try {
     if (artistas !== undefined) {
       useEffect(() => {

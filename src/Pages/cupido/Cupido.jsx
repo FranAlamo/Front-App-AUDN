@@ -49,12 +49,10 @@ function Cupido() {
         };
         try {
             const response = await fetch("http://localhost:8000/api/canciones", requestOptions).then(response => { return response });
-            console.log(response)
             if (response.ok) {
                 const respuesta = await response.json();
                 setArtistas(respuesta.musica);
                 setCurrentArtist(0)
-                console.log(respuesta)
             } else {
                 alert("Ocurrio un error del lado del cliente");
             }
@@ -85,7 +83,6 @@ function Cupido() {
         }
         setArtistasFavoritos(nuevosArtistas);
         setArtistasQuery(nuevosArtistas.join());
-        console.log(artistasQuery);
     }
 
     const goToPlaylist = () => {

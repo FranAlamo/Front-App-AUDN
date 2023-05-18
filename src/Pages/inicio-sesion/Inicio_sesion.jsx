@@ -28,7 +28,7 @@ function Inicio_sesion() {
   }
 
   function checkButtonActive() {
-    if (email.includes("@") && password) {
+    if (email && password) {
       setButtonActive(true);
       setButtonColor("naranja");
     } else {
@@ -94,16 +94,16 @@ function Inicio_sesion() {
         <div className="input-container">
           <p>Contraseña</p>
           <InputComponent
-         bgcolor="inputComponent"
-         type="password"
-         value={password}
-         onChange={handlePasswordChange}
-         img={ojoCerrado}
-         imgOpen={ojoAbierto}
-         imgClosed={ojoCerrado}
+            bgcolor="inputComponent"
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+            img={ojoCerrado}
+            imgOpen={ojoAbierto}
+            imgClosed={ojoCerrado}
           />
         </div>
-      
+
         <div className="button-sesion">
           <BotonRegistro
             txt="Continuar"
